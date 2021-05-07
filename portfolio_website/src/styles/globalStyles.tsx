@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
         outline: 0;
     }
+
+    body {
+        background: #010d1A;
+    }
 `;
 
 export default GlobalStyle;
