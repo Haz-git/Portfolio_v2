@@ -1,26 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Logo:
+import navLogo from '../../imgs/logo1.png';
+
 //Icons:
 import { TwitterSquare } from '@styled-icons/fa-brands/TwitterSquare';
 import { GithubSquare } from '@styled-icons/fa-brands/GithubSquare';
 import { Linkedin } from '@styled-icons/fa-brands/Linkedin';
 
 const TwitterIcon = styled(TwitterSquare)`
-    height: 2rem;
-    width: 2rem;
+    height: 2.2rem;
+    width: 2.2rem;
     color: rgba(255, 255, 255, 1);
 `;
 
 const GithubIcon = styled(GithubSquare)`
-    height: 2rem;
-    width: 2rem;
+    height: 2.2rem;
+    width: 2.2rem;
     color: rgba(255, 255, 255, 1);
 `;
 
 const LinkedinIcon = styled(Linkedin)`
-    height: 2rem;
-    width: 2rem;
+    height: 2.2rem;
+    width: 2.2rem;
     color: rgba(255, 255, 255, 1);
 `;
 
@@ -29,7 +32,8 @@ const NavbarContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: salmon;
+    background: inherit;
+    padding: 1em 0;
 `;
 
 const NavbarLogoContainer = styled.div``;
@@ -46,17 +50,34 @@ const NavbarSocialMediaContainer = styled.div`
     justify-content: center;
 `;
 
-const NavbarSocialMediaIconWrapper = styled.div``;
+const NavbarSocialMediaIconWrapper = styled.div`
+    margin: 0 0.2em;
+`;
 
-const NavbarLinkContainer = styled.div``;
+const NavbarLinkContainer = styled.div`
+    padding: 0;
+    margin: 0 1em;
+`;
 
-const NavbarLink = styled.button``;
+const NavbarLink = styled.button`
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    background: none;
+    border: none;
+`;
+
+const NavbarLogo = styled.img`
+    object-fit: fill;
+    height: 2.5rem;
+`;
 
 const Navbar = () => {
     return (
         <NavbarContainer>
             <NavbarLogoContainer>
-                <div>LOGO HERE</div>
+                <NavbarLogo src={navLogo} />
             </NavbarLogoContainer>
             <NavbarLinksContainer>
                 <NavbarLinkContainer>
