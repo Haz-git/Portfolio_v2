@@ -33,7 +33,7 @@ const NavbarContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     background: inherit;
-    padding: 1em 0;
+    padding: 1.5em 15%;
 `;
 
 const NavbarLogoContainer = styled.div``;
@@ -70,7 +70,7 @@ const NavbarLink = styled.button`
 
 const NavbarLogo = styled.img`
     object-fit: fill;
-    height: 3rem;
+    height: 2.6rem;
 `;
 
 const Navbar = () => {
