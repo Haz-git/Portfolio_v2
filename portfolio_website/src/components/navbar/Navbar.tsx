@@ -56,7 +56,7 @@ const NavbarSocialMediaIconWrapper = styled.div`
 
 const NavbarLinkContainer = styled.div`
     padding: 0;
-    margin: 0 1em;
+    margin: 0 3em;
 `;
 
 const NavbarLink = styled.button`
@@ -70,7 +70,7 @@ const NavbarLink = styled.button`
 
 const NavbarLogo = styled.img`
     object-fit: fill;
-    height: 2.5rem;
+    height: 3rem;
 `;
 
 const Navbar = () => {
