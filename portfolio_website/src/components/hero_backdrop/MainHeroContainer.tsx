@@ -12,10 +12,11 @@ const MainContainer = styled.section`
 `;
 
 const HeroItemContainer = styled.div`
-    display: grid;
-    grid-template-columns: 40% 60%;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,10 +26,11 @@ const HeroItemContainer = styled.div`
 `;
 
 const HeroImg = styled.img`
-    height: 30rem;
-    width: 30rem;
-    border: 1px solid #fdbc3d;
+    height: 24rem;
+    width: 24rem;
+    border: 4px solid #fdbc3d;
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
 `;
 
 const MainHeroContainer = () => {
