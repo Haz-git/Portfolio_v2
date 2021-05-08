@@ -13,18 +13,21 @@ const TwitterIcon = styled(TwitterSquare)`
     height: 2.2rem;
     width: 2.2rem;
     color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 5px;
 `;
 
 const GithubIcon = styled(GithubSquare)`
     height: 2.2rem;
     width: 2.2rem;
     color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 5px;
 `;
 
 const LinkedinIcon = styled(Linkedin)`
     height: 2.2rem;
     width: 2.2rem;
     color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 5px;
 `;
 
 //Styles:
@@ -66,6 +69,7 @@ const NavbarLink = styled.button`
     font-weight: 700;
     background: none;
     border: none;
+    text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
 `;
 
 const NavbarLogo = styled.img`
