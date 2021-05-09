@@ -33,8 +33,8 @@ const Herotext = () => {
             <MainText>Hey! I'm Harry, a Software Engineer.</MainText>
             <DescContainer>
                 <DescText>
-                    By day, I'm a master's candidate in Microbiology with a love
-                    for everything tech and research. At night, I'm a
+                    By day, I'm a master's candidate studying Microbiology with
+                    a love for everything tech and research. At night, I'm a
                     self-taught web developer and data wrangler working in
                     UCSD's Research IT Services.
                 </DescText>
