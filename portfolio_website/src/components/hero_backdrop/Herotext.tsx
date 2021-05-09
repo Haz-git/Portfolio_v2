@@ -16,6 +16,7 @@ const MainText = styled.h1`
     font-size: 2.2em;
     color: #fdbc3d;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    font-weight: 900;
 `;
 
 const DescContainer = styled.div`
@@ -28,6 +29,7 @@ const DescText = styled.p`
     font-size: 1.4em;
     color: rgba(255, 255, 255, 1);
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    font-weight: 100;
 `;
 
 const Herotext = () => {
