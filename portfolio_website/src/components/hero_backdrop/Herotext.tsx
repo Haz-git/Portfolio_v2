@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Components:
+import Button from './Button';
+
 //Styles:
 
 const MainContainer = styled.div`
@@ -39,6 +42,7 @@ const Herotext = () => {
                     UCSD's Research IT Services.
                 </DescText>
             </DescContainer>
+            <Button />
         </MainContainer>
     );
 };
