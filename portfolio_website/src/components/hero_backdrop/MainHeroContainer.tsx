@@ -30,7 +30,7 @@ const HeroImg = styled.img`
     width: 24rem;
     border: 4px solid #fdbc3d;
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+    box-shadow: rgba(13, 56, 72, 1) 7px 10px 50px;
 `;
 
 const MainHeroContainer = () => {
