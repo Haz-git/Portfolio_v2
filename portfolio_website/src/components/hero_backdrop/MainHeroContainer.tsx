@@ -5,7 +5,18 @@ import styled from 'styled-components';
 import Herotext from './Herotext';
 import heroimg from '../../imgs/heroimg.jpg';
 
+//Icons:
+import { DownArrow } from '@styled-icons/boxicons-solid/DownArrow';
+
+const ArrowIcon = styled(DownArrow)`
+    margin: 0 1em;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: #fdbc3d;
+`;
+
 //Styles:
+
 const MainContainer = styled.section`
     background: inherit;
     height: 100vh;
@@ -33,6 +44,22 @@ const HeroImg = styled.img`
     box-shadow: rgba(13, 56, 72, 1) 7px 10px 50px;
 `;
 
+const ProjectsArrowContainer = styled.div`
+    position: absolute;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 0;
+`;
+
+const ProjectsText = styled.p`
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #fdbc3d;
+`;
+
 const MainHeroContainer = () => {
     return (
         <MainContainer>
@@ -40,6 +67,13 @@ const MainHeroContainer = () => {
                 <Herotext />
                 <HeroImg src={heroimg} />
             </HeroItemContainer>
+            <ProjectsArrowContainer>
+                <ProjectsText>
+                    <ArrowIcon />
+                    Check out my work
+                    <ArrowIcon />
+                </ProjectsText>
+            </ProjectsArrowContainer>
         </MainContainer>
     );
 };
