@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMax, deviceMin } from '../../devices/breakpoints';
 
 //Components:
 import Herotext from './Herotext';
@@ -34,6 +35,12 @@ const HeroItemContainer = styled.div`
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+
+    @media ${deviceMax.mobileS} {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 1em;
+    }
 `;
 
 const HeroImg = styled.img`
@@ -42,6 +49,12 @@ const HeroImg = styled.img`
     border: 4px solid #fdbc3d;
     border-radius: 50%;
     box-shadow: rgba(13, 56, 72, 1) 7px 10px 50px;
+
+    @media ${deviceMax.mobileS} {
+        height: 11rem;
+        width: 11rem;
+        box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;
+    }
 `;
 
 const ProjectsArrowContainer = styled.div`
