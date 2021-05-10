@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMax, deviceMin } from '../../devices/breakpoints';
 
 //Components:
 import Button from './Button';
@@ -17,11 +18,19 @@ const MainText = styled.h1`
     color: #fdbc3d;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
     font-weight: 900;
+
+    @media ${deviceMax.mobileS} {
+        font-size: 1.3em;
+    }
 `;
 
 const DescContainer = styled.div`
     margin: 2em 0;
     width: 36em;
+    @media ${deviceMax.mobileS} {
+        margin: 1em 0;
+        width: 100%;
+    }
 `;
 
 const DescText = styled.p`
@@ -30,6 +39,9 @@ const DescText = styled.p`
     color: rgba(255, 255, 255, 1);
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
     font-weight: 100;
+    @media ${deviceMax.mobileS} {
+        font-size: 0.9em;
+    }
 `;
 
 const Herotext = () => {
