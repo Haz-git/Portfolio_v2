@@ -1,13 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMax, deviceMin } from '../../devices/breakpoints';
 
 //Logo:
 import navLogo from '../../imgs/logo1.png';
 
 //Icons:
+import { Menu } from '@styled-icons/ionicons-solid/Menu';
 import { TwitterSquare } from '@styled-icons/fa-brands/TwitterSquare';
 import { GithubSquare } from '@styled-icons/fa-brands/GithubSquare';
 import { Linkedin } from '@styled-icons/fa-brands/Linkedin';
+
+const MenuIcon = styled(Menu)`
+    height: 2.2rem;
+    width: 2.2rem;
+    color: #fdbc3d;
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 5px;
+`;
 
 const TwitterIcon = styled(TwitterSquare)`
     height: 2.2rem;
@@ -70,11 +79,26 @@ const NavbarLink = styled.button`
     background: none;
     border: none;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+
+    @media ${deviceMax.mobileL} {
+        display: none;
+    }
 `;
 
 const NavbarLogo = styled.img`
     object-fit: fill;
     height: 2.6rem;
+`;
+
+const BurgerMenuContainer = styled.button`
+    margin: 0 1em;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+
+    @media ${deviceMin.mobileL} {
+        display: none;
+    }
 `;
 
 const Navbar = () => {
@@ -104,6 +128,9 @@ const Navbar = () => {
                 <NavbarSocialMediaIconWrapper>
                     <LinkedinIcon />
                 </NavbarSocialMediaIconWrapper>
+                <BurgerMenuContainer>
+                    <MenuIcon />
+                </BurgerMenuContainer>
             </NavbarSocialMediaContainer>
         </NavbarContainer>
     );
