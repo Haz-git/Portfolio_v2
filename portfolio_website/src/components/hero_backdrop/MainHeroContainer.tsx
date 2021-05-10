@@ -14,6 +14,12 @@ const ArrowIcon = styled(DownArrow)`
     width: 1.4rem;
     height: 1.4rem;
     color: #ffffff;
+
+    @media ${deviceMax.mobileS} {
+        margin: 0 0.5em;
+        width: 1rem;
+        height: 1rem;
+    }
 `;
 
 //Styles:
@@ -54,6 +60,7 @@ const HeroImg = styled.img`
         height: 11rem;
         width: 11rem;
         box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;
+        margin-bottom: 1em;
     }
 `;
 
@@ -72,6 +79,10 @@ const ProjectsText = styled.p`
     font-weight: 700;
     color: #ffffff;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    @media ${deviceMax.mobileS} {
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
 `;
 
 const MainHeroContainer = () => {

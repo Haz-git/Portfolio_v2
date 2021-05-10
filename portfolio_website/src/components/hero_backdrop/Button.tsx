@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMax, deviceMin } from '../../devices/breakpoints';
 
 //Styles:
 
@@ -20,6 +21,11 @@ const ButtonContainer = styled.button`
 
     &:hover {
         transform: scale(1.05);
+    }
+
+    @media ${deviceMax.mobileS} {
+        padding: 0.6em 0.9em;
+        font-size: 0.9em;
     }
 `;
 
