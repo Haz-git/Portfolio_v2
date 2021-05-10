@@ -12,7 +12,7 @@ const ArrowIcon = styled(DownArrow)`
     margin: 0 1em;
     width: 1.4rem;
     height: 1.4rem;
-    color: #fdbc3d;
+    color: #ffffff;
 `;
 
 //Styles:
@@ -57,7 +57,8 @@ const ProjectsText = styled.p`
     font-family: 'Lato', sans-serif;
     font-size: 1.3em;
     font-weight: 700;
-    color: #fdbc3d;
+    color: #ffffff;
+    text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
 `;
 
 const MainHeroContainer = () => {
