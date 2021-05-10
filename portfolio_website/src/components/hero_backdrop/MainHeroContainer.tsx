@@ -37,8 +37,8 @@ const HeroItemContainer = styled.div`
 `;
 
 const HeroImg = styled.img`
-    height: 24rem;
-    width: 24rem;
+    height: 26rem;
+    width: 26rem;
     border: 4px solid #fdbc3d;
     border-radius: 50%;
     box-shadow: rgba(13, 56, 72, 1) 7px 10px 50px;
@@ -50,7 +50,7 @@ const ProjectsArrowContainer = styled.div`
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: 1.5em;
 `;
 
 const ProjectsText = styled.p`
