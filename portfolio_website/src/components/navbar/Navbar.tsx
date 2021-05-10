@@ -46,6 +46,9 @@ const NavbarContainer = styled.nav`
     justify-content: space-between;
     background: inherit;
     padding: 1.5em 15%;
+    @media ${deviceMax.mobileS} {
+        padding: 0.5em 1em;
+    }
 `;
 
 const NavbarLogoContainer = styled.div``;
@@ -54,12 +57,18 @@ const NavbarLinksContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media ${deviceMax.mobileL} {
+        display: none;
+    }
 `;
 
 const NavbarSocialMediaContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media ${deviceMax.mobileS} {
+        justify-content: start;
+    }
 `;
 
 const NavbarSocialMediaIconWrapper = styled.div`
@@ -88,6 +97,10 @@ const NavbarLink = styled.button`
 const NavbarLogo = styled.img`
     object-fit: fill;
     height: 2.6rem;
+
+    @media ${deviceMax.mobileS} {
+        height: 2rem;
+    }
 `;
 
 const BurgerMenuContainer = styled.button`
