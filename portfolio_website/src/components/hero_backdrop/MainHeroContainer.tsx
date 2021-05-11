@@ -20,6 +20,12 @@ const ArrowIcon = styled(DownArrow)`
         width: 1rem;
         height: 1rem;
     }
+
+    @media ${deviceMin.tablet} {
+        margin: 0 1em;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
 `;
 
 //Styles:
@@ -119,6 +125,11 @@ const ProjectsText = styled.p`
 
     @media ${deviceMin.mobileM} {
         font-size: 0.8em;
+        white-space: nowrap;
+    }
+
+    @media ${deviceMin.tablet} {
+        font-size: 1.1em;
         white-space: nowrap;
     }
 `;
