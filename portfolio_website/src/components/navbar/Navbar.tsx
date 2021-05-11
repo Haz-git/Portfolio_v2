@@ -43,15 +43,28 @@ const LinkedinIcon = styled(Linkedin)`
 const NavbarContainer = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: inherit;
     padding: 1.5em 15%;
+
     @media ${deviceMin.mobileS} {
         padding: 0.5em 1em;
+        justify-content: space-between;
+    }
+
+    @media ${deviceMin.tablet} {
+        padding: 1.5em 10%;
+        justify-content: center;
     }
 
     @media ${deviceMin.laptopS} {
-        padding: 1em 2em;
+        padding: 1.5em 10%;
+        justify-content: space-evenly;
+    }
+
+    @media ${deviceMin.laptopS} {
+        padding: 1.5em 10%;
+        justify-content: space-evenly;
     }
 `;
 
@@ -61,8 +74,15 @@ const NavbarLinksContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media ${deviceMax.laptopS} {
+
+    @media ${deviceMin.mobileS} {
         display: none;
+    }
+
+    @media ${deviceMin.tablet} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
@@ -70,8 +90,13 @@ const NavbarSocialMediaContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media ${deviceMax.mobileS} {
+
+    @media ${deviceMin.mobileS} {
         justify-content: start;
+    }
+
+    @media ${deviceMin.tablet} {
+        justify-content: center;
     }
 `;
 
@@ -93,8 +118,12 @@ const NavbarLink = styled.button`
     border: none;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
 
-    @media ${deviceMax.laptopS} {
+    @media ${deviceMin.mobileS} {
         display: none;
+    }
+
+    @media ${deviceMin.tablet} {
+        display: block;
     }
 `;
 
@@ -113,7 +142,11 @@ const BurgerMenuContainer = styled.button`
     border: none;
     cursor: pointer;
 
-    @media ${deviceMin.laptopS} {
+    @media ${deviceMin.mobileS} {
+        display: block;
+    }
+
+    @media ${deviceMin.tablet} {
         display: none;
     }
 `;

@@ -32,7 +32,7 @@ const MainContainer = styled.section`
 const HeroItemContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     padding: 0 15%;
     position: absolute;
@@ -42,16 +42,15 @@ const HeroItemContainer = styled.div`
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
         display: flex;
         flex-direction: column-reverse;
         padding: 0 1em;
     }
 
-    @media ${deviceMax.laptopS} {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 0 1em;
+    @media ${deviceMin.tablet} {
+        flex-direction: row;
+        padding: 0 5%;
     }
 `;
 
@@ -84,11 +83,13 @@ const HeroImg = styled.img`
     }
 
     @media ${deviceMin.tablet} {
-        height: 19rem;
-        width: 19rem;
+        margin-left: 1em;
+        height: 20rem;
+        width: 20rem;
     }
 
     @media ${deviceMin.laptopS} {
+        margin-left: 2em;
         height: 22rem;
         width: 22rem;
         box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;

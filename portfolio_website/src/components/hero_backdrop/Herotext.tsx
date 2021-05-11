@@ -9,6 +9,17 @@ import Button from './Button';
 
 const MainContainer = styled.div`
     text-align: left;
+    width: 100%;
+
+    @media ${deviceMin.tablet} {
+        max-width: 20em;
+        margin-right: 1em;
+    }
+
+    @media ${deviceMin.laptopS} {
+        max-width: 35em;
+        margin-right: 2em;
+    }
 `;
 
 const MainText = styled.h1`
@@ -32,6 +43,11 @@ const MainText = styled.h1`
         white-space: nowrap;
     }
 
+    @media ${deviceMin.tablet} {
+        font-size: 2em;
+        white-space: normal;
+    }
+
     /* @media ${deviceMax.tablet} {
         font-size: 1.8em;
     } */
@@ -46,9 +62,10 @@ const DescContainer = styled.div`
         width: 100%;
     }
 
-    /* @media ${deviceMax.tablet} {
+    @media ${deviceMin.tablet} {
         width: 100%;
-    } */
+        margin: 1.5em 0;
+    }
 `;
 
 const DescText = styled.p`
@@ -75,9 +92,9 @@ const DescText = styled.p`
         hyphens: auto;
     }
 
-    /* @media ${deviceMax.tablet} {
-        font-size: 1.3em;
-    } */
+    @media ${deviceMin.tablet} {
+        font-size: 1.2em;
+    }
 `;
 
 const Herotext = () => {
