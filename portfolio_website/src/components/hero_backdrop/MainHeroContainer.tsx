@@ -76,6 +76,13 @@ const HeroImg = styled.img`
         margin-bottom: 1em;
     }
 
+    @media ${deviceMin.mobileL} {
+        height: 18rem;
+        width: 18rem;
+        box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;
+        margin-bottom: 1em;
+    }
+
     @media ${deviceMin.tablet} {
         height: 19rem;
         width: 19rem;

@@ -27,6 +27,16 @@ const ButtonContainer = styled.button`
         padding: 0.6em 0.9em;
         font-size: 0.9em;
     }
+
+    @media ${deviceMin.mobileM} {
+        padding: 0.7em 1em;
+        font-size: 1em;
+    }
+
+    @media ${deviceMin.mobileL} {
+        padding: 0.7em 1em;
+        font-size: 1.2em;
+    }
 `;
 
 const Button = () => {

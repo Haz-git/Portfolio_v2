@@ -27,6 +27,11 @@ const MainText = styled.h1`
         white-space: nowrap;
     }
 
+    @media ${deviceMin.mobileL} {
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+
     /* @media ${deviceMax.tablet} {
         font-size: 1.8em;
     } */
@@ -60,6 +65,12 @@ const DescText = styled.p`
 
     @media ${deviceMin.mobileM} {
         font-size: 1em;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    @media ${deviceMin.mobileL} {
+        font-size: 1.1em;
         word-break: break-word;
         hyphens: auto;
     }
