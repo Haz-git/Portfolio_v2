@@ -23,7 +23,7 @@ const ButtonContainer = styled.button`
         transform: scale(1.05);
     }
 
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
         padding: 0.6em 0.9em;
         font-size: 0.9em;
     }
