@@ -8,7 +8,8 @@ const size = {
     laptopS: '850px',
     laptop: '1024px',
     laptopL: '1440px',
-    desktop: '2560px',
+    desktopS: '1920px',
+    desktopL: '2560px',
 };
 
 export const deviceMin = {
@@ -20,8 +21,8 @@ export const deviceMin = {
     laptopS: `(min-width: ${size.laptopS})`,
     laptop: `(min-width: ${size.laptop})`,
     laptopL: `(min-width: ${size.laptopL})`,
-    desktop: `(min-width: ${size.desktop})`,
-    desktopL: `(min-width: ${size.desktop})`,
+    desktopS: `(min-width: ${size.desktopS})`,
+    desktopL: `(min-width: ${size.desktopL})`,
 };
 
 export const deviceMax = {
@@ -33,6 +34,6 @@ export const deviceMax = {
     laptopS: `(max-width: ${size.laptopS})`,
     laptop: `(max-width: ${size.laptop})`,
     laptopL: `(max-width: ${size.laptopL})`,
-    desktop: `(max-width: ${size.desktop})`,
-    desktopL: `(max-width: ${size.desktop})`,
+    desktopS: `(max-width: ${size.desktopS})`,
+    desktopL: `(max-width: ${size.desktopL})`,
 };
