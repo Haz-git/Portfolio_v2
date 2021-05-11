@@ -1,26 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMin } from '../../devices/breakpoints';
+
+//Components:
+import ProjectItem from './ProjectItem';
 
 //Styles:
 
 const MainContainer = styled.section`
-    margin-top: 20em;
+    margin-top: 2em;
     padding: 1.5em 15%;
+
+    @media ${deviceMin.mobileS} {
+        padding: 0 1em;
+    }
 `;
 
 const MainHeader = styled.h1`
     font-family: 'Lato', sans-serif;
     font-size: 2em;
-    font-weight: 900;
-    color: white;
+    font-weight: 700;
+    color: #fdbc3d;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
     text-align: center;
+
+    @media ${deviceMin.mobileS} {
+        padding: 0 1em;
+        font-size: 1.5em;
+    }
 `;
 
 const MainProjects = () => {
     return (
         <MainContainer>
-            <MainHeader>Projects</MainHeader>
+            <MainHeader>My Projects</MainHeader>
         </MainContainer>
     );
 };
