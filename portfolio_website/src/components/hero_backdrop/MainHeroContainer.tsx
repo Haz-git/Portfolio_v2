@@ -15,7 +15,7 @@ const ArrowIcon = styled(DownArrow)`
     height: 1.4rem;
     color: #ffffff;
 
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
         margin: 0 0.5em;
         width: 1rem;
         height: 1rem;
