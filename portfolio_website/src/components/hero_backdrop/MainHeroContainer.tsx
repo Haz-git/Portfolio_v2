@@ -47,6 +47,12 @@ const HeroItemContainer = styled.div`
         flex-direction: column-reverse;
         padding: 0 1em;
     }
+
+    @media ${deviceMax.laptopS} {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 1em;
+    }
 `;
 
 const HeroImg = styled.img`
@@ -56,9 +62,28 @@ const HeroImg = styled.img`
     border-radius: 50%;
     box-shadow: rgba(13, 56, 72, 1) 7px 10px 50px;
 
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
         height: 11rem;
         width: 11rem;
+        box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;
+        margin-bottom: 1em;
+    }
+
+    @media ${deviceMin.mobileM} {
+        height: 15rem;
+        width: 15rem;
+        box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;
+        margin-bottom: 1em;
+    }
+
+    @media ${deviceMin.tablet} {
+        height: 19rem;
+        width: 19rem;
+    }
+
+    @media ${deviceMin.laptopS} {
+        height: 22rem;
+        width: 22rem;
         box-shadow: rgba(13, 56, 72, 1) 4px 8px 30px;
         margin-bottom: 1em;
     }
@@ -79,7 +104,12 @@ const ProjectsText = styled.p`
     font-weight: 700;
     color: #ffffff;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
+
+    @media ${deviceMin.mobileM} {
         font-size: 0.8em;
         white-space: nowrap;
     }
