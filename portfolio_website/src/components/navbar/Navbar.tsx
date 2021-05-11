@@ -57,7 +57,7 @@ const NavbarLinksContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media ${deviceMax.mobileL} {
+    @media ${deviceMax.laptopS} {
         display: none;
     }
 `;
@@ -89,7 +89,7 @@ const NavbarLink = styled.button`
     border: none;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
 
-    @media ${deviceMax.mobileL} {
+    @media ${deviceMax.laptopS} {
         display: none;
     }
 `;
@@ -109,7 +109,7 @@ const BurgerMenuContainer = styled.button`
     border: none;
     cursor: pointer;
 
-    @media ${deviceMin.mobileL} {
+    @media ${deviceMin.laptopS} {
         display: none;
     }
 `;
