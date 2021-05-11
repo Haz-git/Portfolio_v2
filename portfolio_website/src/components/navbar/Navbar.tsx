@@ -108,7 +108,7 @@ const NavbarLogo = styled.img`
 `;
 
 const BurgerMenuContainer = styled.button`
-    margin: 0 1em;
+    margin-left: 1em;
     background: inherit;
     border: none;
     cursor: pointer;
