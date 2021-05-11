@@ -46,8 +46,12 @@ const NavbarContainer = styled.nav`
     justify-content: space-between;
     background: inherit;
     padding: 1.5em 15%;
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
         padding: 0.5em 1em;
+    }
+
+    @media ${deviceMin.laptopS} {
+        padding: 1em 2em;
     }
 `;
 
@@ -98,7 +102,7 @@ const NavbarLogo = styled.img`
     object-fit: fill;
     height: 2.6rem;
 
-    @media ${deviceMax.mobileS} {
+    @media ${deviceMin.mobileS} {
         height: 2rem;
     }
 `;
