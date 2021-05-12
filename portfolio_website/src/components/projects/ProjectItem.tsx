@@ -111,10 +111,13 @@ const ImgItem = styled.img`
 const BuildToolsContainer = styled.div``;
 
 //This type could also be interface, use interface if need to export for extension. Interface are better used for prop handling in react. Types are better used for functions and complex types...
+//Question mark indicates an optional component...
+//string[] is an array of a certain type. If denotated [string] that means one string argument in array.
 interface ProjectItemProps {
     header: string;
     desc: string;
     image: string;
+    buildTools?: string[];
 }
 
 //Destructure the header type from type or interface, JSX.Element is an annotated return type. This causes an error to be raised if another type is return accidentally. Leaving out JSX.Element results in an inferred return type.
@@ -123,6 +126,7 @@ const ProjectItem = ({
     header,
     desc,
     image,
+    buildTools,
 }: ProjectItemProps): JSX.Element => {
     return (
         <MainProjectContainer>
