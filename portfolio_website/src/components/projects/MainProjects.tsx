@@ -4,6 +4,7 @@ import { deviceMin } from '../../devices/breakpoints';
 
 //Components:
 import ProjectItem from './ProjectItem';
+import gymjotImg from '../../imgs/gymjot_project.png';
 
 //Styles:
 
@@ -25,7 +26,7 @@ const MainHeader = styled.h1`
     text-align: center;
 
     @media ${deviceMin.mobileS} {
-        padding: 0 1em;
+        margin-bottom: 3em;
         font-size: 1.3em;
     }
 `;
@@ -36,10 +37,8 @@ const MainProjects = () => {
             <MainHeader>My Projects</MainHeader>
             <ProjectItem
                 header="GymJot"
-                desc="GymJot is a passion project for lifters.GymJot is a passion
-                    project for lifters. GymJot is a passion project for
-                    lifters. GymJot is a passion project for lifters. GymJot is
-                    a passion project for lifters."
+                desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows."
+                image={gymjotImg}
             />
         </MainContainer>
     );
