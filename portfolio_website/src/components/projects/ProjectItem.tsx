@@ -13,6 +13,60 @@ import { Nodejs } from '@styled-icons/boxicons-logos/Nodejs';
 import { Mongodb } from '@styled-icons/simple-icons/Mongodb';
 import { Express } from '@styled-icons/simple-icons/Express';
 
+const htmlIcon = styled(Html5)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const cssIcon = styled(Css3)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const javascriptIcon = styled(Javascript)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const reactIcon = styled(ReactLogo)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const reduxIcon = styled(Redux)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const typescriptIcon = styled(Typescript)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const nodeIcon = styled(Nodejs)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const mongoIcon = styled(Mongodb)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
+const expressIcon = styled(Express)`
+    height: 1em;
+    width: 1em;
+    color: #fdbc3d;
+`;
+
 //Styles:
 
 const MainProjectContainer = styled.div`
@@ -53,6 +107,8 @@ const ImgItem = styled.img`
     border-radius: 1em;
     box-shadow: rgba(13, 56, 72, 1) 1px 5px 8px;
 `;
+
+const BuildToolsContainer = styled.div``;
 
 //This type could also be interface, use interface if need to export for extension. Interface are better used for prop handling in react. Types are better used for functions and complex types...
 interface ProjectItemProps {
