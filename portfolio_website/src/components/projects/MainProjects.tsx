@@ -39,7 +39,7 @@ const MainProjects = () => {
                 header="GymJot"
                 desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows."
                 image={gymjotImg}
-                buildTools={['test', 'test']}
+                buildTools={['html', 'css']}
             />
         </MainContainer>
     );
