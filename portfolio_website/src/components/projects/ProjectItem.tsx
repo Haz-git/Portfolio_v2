@@ -128,6 +128,13 @@ const ProjectItem = ({
     image,
     buildTools,
 }: ProjectItemProps): JSX.Element => {
+    const findBuildTools = () => {
+        //How do I take this array of text --> Insert a bunch of icons according to the order of the text --> map them out to the website?
+        if (buildTools) {
+            console.log(buildTools);
+        }
+    };
+
     return (
         <MainProjectContainer>
             <HeaderContainer>
@@ -139,6 +146,7 @@ const ProjectItem = ({
             <ImgContainer>
                 <ImgItem src={image} />
             </ImgContainer>
+            {findBuildTools()}
         </MainProjectContainer>
     );
 };
