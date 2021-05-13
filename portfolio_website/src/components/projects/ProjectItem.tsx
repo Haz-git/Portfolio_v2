@@ -14,56 +14,56 @@ import { Mongodb } from '@styled-icons/simple-icons/Mongodb';
 import { Express } from '@styled-icons/simple-icons/Express';
 
 const HtmlIcon = styled(Html5)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const CssIcon = styled(Css3)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const JavascriptIcon = styled(Javascript)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const ReactIcon = styled(ReactLogo)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const ReduxIcon = styled(Redux)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const TypescriptIcon = styled(Typescript)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const NodeIcon = styled(Nodejs)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const MongoIcon = styled(Mongodb)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
 const ExpressIcon = styled(Express)`
-    height: 1em;
-    width: 1em;
+    height: 2rem;
+    width: 2rem;
     color: #fdbc3d;
 `;
 
@@ -108,7 +108,33 @@ const ImgItem = styled.img`
     box-shadow: rgba(13, 56, 72, 1) 1px 5px 8px;
 `;
 
-const BuildToolsContainer = styled.div``;
+const BuildToolsHeader = styled.h3`
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+`;
+
+const BuildToolsContainer = styled.div`
+    background: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(48px, 100%), 0fr));
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    margin: 0.5em 0;
+    row-gap: 0.2em;
+    column-gap: 0.2em;
+    /* gap: 0.2em; */
+`;
+
+const ToolContainer = styled.div`
+    background: #1b222a;
+    padding: 0.5em 0.5em;
+    border-radius: 0.4em;
+    margin: 0 auto;
+`;
 
 //This type could also be interface, use interface if need to export for extension. Interface are better used for prop handling in react. Types are better used for functions and complex types...
 //Question mark indicates an optional component...
@@ -135,10 +161,67 @@ const ProjectItem = ({
                 // if (tool === 'html') return <HtmlIcon />;
                 switch (tool) {
                     case 'html':
-                        return <HtmlIcon />;
+                        return (
+                            <ToolContainer>
+                                <HtmlIcon />
+                            </ToolContainer>
+                        );
                         break;
                     case 'css':
-                        return <CssIcon />;
+                        return (
+                            <ToolContainer>
+                                <CssIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'js':
+                        return (
+                            <ToolContainer>
+                                <JavascriptIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'react':
+                        return (
+                            <ToolContainer>
+                                <ReactIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'redux':
+                        return (
+                            <ToolContainer>
+                                <ReduxIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'ts':
+                        return (
+                            <ToolContainer>
+                                <TypescriptIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'node':
+                        return (
+                            <ToolContainer>
+                                <NodeIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'mongo':
+                        return (
+                            <ToolContainer>
+                                <MongoIcon />
+                            </ToolContainer>
+                        );
+                        break;
+                    case 'express':
+                        return (
+                            <ToolContainer>
+                                <ExpressIcon />
+                            </ToolContainer>
+                        );
                         break;
                     default:
                         return null;
@@ -158,7 +241,8 @@ const ProjectItem = ({
             <ImgContainer>
                 <ImgItem src={image} />
             </ImgContainer>
-            <>{findBuildTools()}</>
+            <BuildToolsHeader>Built with</BuildToolsHeader>
+            <BuildToolsContainer>{findBuildTools()}</BuildToolsContainer>
         </MainProjectContainer>
     );
 };
