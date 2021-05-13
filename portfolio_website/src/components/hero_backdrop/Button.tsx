@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { JsxEmit } from 'typescript';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
 
 //Styles:
@@ -39,7 +40,20 @@ const ButtonContainer = styled.button`
     }
 `;
 
-const Button = () => {
+//Interface:
+interface ButtonProps {
+    label?: string;
+    isLink?: boolean;
+    onClick?: Function;
+    buttonIcon?: JSX.Element;
+}
+
+const Button = ({
+    label,
+    isLink,
+    onClick,
+    buttonIcon,
+}: ButtonProps): JSX.Element => {
     return <ButtonContainer>Connect with me!</ButtonContainer>;
 };
 
