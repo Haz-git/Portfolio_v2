@@ -13,55 +13,55 @@ import { Nodejs } from '@styled-icons/boxicons-logos/Nodejs';
 import { Mongodb } from '@styled-icons/simple-icons/Mongodb';
 import { Express } from '@styled-icons/simple-icons/Express';
 
-const htmlIcon = styled(Html5)`
+const HtmlIcon = styled(Html5)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const cssIcon = styled(Css3)`
+const CssIcon = styled(Css3)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const javascriptIcon = styled(Javascript)`
+const JavascriptIcon = styled(Javascript)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const reactIcon = styled(ReactLogo)`
+const ReactIcon = styled(ReactLogo)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const reduxIcon = styled(Redux)`
+const ReduxIcon = styled(Redux)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const typescriptIcon = styled(Typescript)`
+const TypescriptIcon = styled(Typescript)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const nodeIcon = styled(Nodejs)`
+const NodeIcon = styled(Nodejs)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const mongoIcon = styled(Mongodb)`
+const MongoIcon = styled(Mongodb)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
 `;
 
-const expressIcon = styled(Express)`
+const ExpressIcon = styled(Express)`
     height: 1em;
     width: 1em;
     color: #fdbc3d;
@@ -131,7 +131,19 @@ const ProjectItem = ({
     const findBuildTools = () => {
         //How do I take this array of text --> Insert a bunch of icons according to the order of the text --> map them out to the website?
         if (buildTools) {
-            console.log(buildTools);
+            return buildTools.map((tool) => {
+                // if (tool === 'html') return <HtmlIcon />;
+                switch (tool) {
+                    case 'html':
+                        return <HtmlIcon />;
+                        break;
+                    case 'css':
+                        return <CssIcon />;
+                        break;
+                    default:
+                        return null;
+                }
+            });
         }
     };
 
@@ -146,7 +158,7 @@ const ProjectItem = ({
             <ImgContainer>
                 <ImgItem src={image} />
             </ImgContainer>
-            {findBuildTools()}
+            <>{findBuildTools()}</>
         </MainProjectContainer>
     );
 };
