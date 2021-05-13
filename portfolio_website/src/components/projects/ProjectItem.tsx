@@ -136,6 +136,8 @@ const ToolContainer = styled.div`
     margin: 0 auto;
 `;
 
+const ButtonContainer = styled.div``;
+
 //This type could also be interface, use interface if need to export for extension. Interface are better used for prop handling in react. Types are better used for functions and complex types...
 //Question mark indicates an optional component...
 //string[] is an array of a certain type. If denotated [string] that means one string argument in array.
