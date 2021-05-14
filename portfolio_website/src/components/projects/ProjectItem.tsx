@@ -243,7 +243,7 @@ const ProjectItem = ({
             <ImgContainer>
                 <ImgItem src={image} />
             </ImgContainer>
-            <BuildToolsHeader>Built with</BuildToolsHeader>
+            <BuildToolsHeader>Created with</BuildToolsHeader>
             <BuildToolsContainer>{findBuildTools()}</BuildToolsContainer>
         </MainProjectContainer>
     );
