@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Components:
+import Button from '../hero_backdrop/Button';
+
+//Icons: remix-fill:
+import { Play } from '@styled-icons/remix-line/Play';
+import { Github } from '@styled-icons/remix-line/Github';
+
 //Icons: boxicons-logos
 
 import { Html5 } from '@styled-icons/boxicons-logos/Html5';
@@ -12,6 +19,18 @@ import { Typescript } from '@styled-icons/simple-icons/Typescript';
 import { Nodejs } from '@styled-icons/boxicons-logos/Nodejs';
 import { Mongodb } from '@styled-icons/simple-icons/Mongodb';
 import { Express } from '@styled-icons/simple-icons/Express';
+
+const PlayIcon = styled(Play)`
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #fdbc3d;
+`;
+
+const GithubIcon = styled(Github)`
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #fdbc3d;
+`;
 
 const HtmlIcon = styled(Html5)`
     height: 2rem;
@@ -136,7 +155,17 @@ const ToolContainer = styled.div`
     margin: 0 auto;
 `;
 
-const ButtonContainer = styled.div``;
+const ButtonContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* grid-template-columns: 50% 50%; */
+    margin: 1em 0;
+`;
+
+const ButtonSpacing = styled.div`
+    width: 0.5em;
+`;
 
 //This type could also be interface, use interface if need to export for extension. Interface are better used for prop handling in react. Types are better used for functions and complex types...
 //Question mark indicates an optional component...
@@ -245,6 +274,19 @@ const ProjectItem = ({
             </ImgContainer>
             <BuildToolsHeader>Created with</BuildToolsHeader>
             <BuildToolsContainer>{findBuildTools()}</BuildToolsContainer>
+            <ButtonContainer>
+                <Button
+                    label="View code"
+                    buttonIcon={<GithubIcon />}
+                    isFilled={false}
+                />
+                <ButtonSpacing />
+                <Button
+                    label="Test live"
+                    buttonIcon={<PlayIcon />}
+                    isFilled={true}
+                />
+            </ButtonContainer>
         </MainProjectContainer>
     );
 };
