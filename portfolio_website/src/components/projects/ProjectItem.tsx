@@ -23,7 +23,7 @@ import { Express } from '@styled-icons/simple-icons/Express';
 const PlayIcon = styled(Play)`
     height: 1.5rem;
     width: 1.5rem;
-    color: #fdbc3d;
+    color: #010d1a;
 `;
 
 const GithubIcon = styled(Github)`
@@ -278,13 +278,15 @@ const ProjectItem = ({
                 <Button
                     label="View code"
                     buttonIcon={<GithubIcon />}
-                    isFilled={false}
+                    btnBackground="transparent"
+                    btnTextColor="#fdbc3d"
                 />
                 <ButtonSpacing />
                 <Button
                     label="Test live"
                     buttonIcon={<PlayIcon />}
-                    isFilled={true}
+                    btnBackground="#fdbc3d"
+                    btnTextColor="#010d1A"
                 />
             </ButtonContainer>
         </MainProjectContainer>
