@@ -109,7 +109,7 @@ const Herotext = () => {
                     UCSD's Research IT Services.
                 </DescText>
             </DescContainer>
-            <Button />
+            <Button label="Connect with me!" />
         </MainContainer>
     );
 };
