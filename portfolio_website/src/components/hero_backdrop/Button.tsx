@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { JsxEmit } from 'typescript';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
 
 //Interface:
@@ -9,7 +8,8 @@ interface ButtonProps {
     isLink?: boolean;
     onClick?: Function;
     buttonIcon?: JSX.Element;
-    isFilled?: boolean;
+    btnBackground?: string;
+    btnTextColor?: string;
 }
 
 //Styles:
@@ -21,11 +21,11 @@ const ButtonContainer = styled.button<ButtonProps>`
     border: 1px solid #fdbc3d;
     padding: 0.7em 1em;
     outline: none;
-    color: #fdbc3d;
-    background: ${(props) => (props.isFilled ? '#fdbc3d' : '#010d1a')};
+    color: ${(props) => props.btnTextColor};
+    background: ${(props) => props.btnBackground};
     border-radius: 0.3em;
     box-shadow: rgba(13, 56, 72, 0.3) 0px 4px 40px,
-        rgba(13, 56, 72, 0.22) 0px 4px 12px;
+        f rgba(13, 56, 72, 0.22) 0px 4px 12px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
@@ -73,10 +73,14 @@ const Button = ({
     isLink,
     onClick,
     buttonIcon,
-    isFilled,
+    btnBackground,
+    btnTextColor,
 }: ButtonProps): JSX.Element => {
     return (
-        <ButtonContainer>
+        <ButtonContainer
+            btnBackground={btnBackground}
+            btnTextColor={btnTextColor}
+        >
             {buttonIcon && <IconContainer>{buttonIcon}</IconContainer>}
             <ButtonText>{label}</ButtonText>
         </ButtonContainer>
