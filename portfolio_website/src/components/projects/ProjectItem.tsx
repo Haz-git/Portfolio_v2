@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMin } from '../../devices/breakpoints';
 
 //Components:
 import Button from '../hero_backdrop/Button';
@@ -90,6 +91,14 @@ const ExpressIcon = styled(Express)`
 
 const MainProjectContainer = styled.div`
     margin: 1em 0;
+
+    @media ${deviceMin.tablet} {
+        padding: 0 5%;
+    }
+
+    @media ${deviceMin.laptopS} {
+        padding: 0 15%;
+    }
 `;
 
 const HeaderContainer = styled.div`
@@ -145,7 +154,11 @@ const BuildToolsContainer = styled.div`
     margin: 0.5em 0;
     row-gap: 0.2em;
     column-gap: 0.2em;
-    /* gap: 0.2em; */
+
+    @media ${deviceMin.tablet} {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 `;
 
 const ToolContainer = styled.div`
