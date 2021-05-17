@@ -56,7 +56,7 @@ const HeroItemContainer = styled.div`
 
     @media ${deviceMin.tablet} {
         flex-direction: row;
-        padding: 0 5%;
+        padding: 0 2%;
     }
 `;
 

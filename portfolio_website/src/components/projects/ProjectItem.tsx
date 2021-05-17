@@ -115,7 +115,7 @@ const DesktopMainProjectContainer = styled.div`
     margin: 1em 0;
 
     @media ${deviceMin.tablet} {
-        padding: 0 5%;
+        padding: 0 2%;
         grid-template-columns: 50% 50%;
     }
 
