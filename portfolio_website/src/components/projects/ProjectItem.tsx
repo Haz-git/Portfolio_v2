@@ -116,6 +116,7 @@ const DesktopMainProjectContainer = styled.div`
 
     @media ${deviceMin.tablet} {
         padding: 0 5%;
+        grid-template-columns: 50% 50%;
     }
 
     @media ${deviceMin.laptopS} {
@@ -138,6 +139,10 @@ const MainHeader = styled.h2`
     font-weight: 700;
     color: #ffffff;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+
+    @media ${deviceMin.tablet} {
+        font-size: 1.8em;
+    }
 `;
 
 const DescContainer = styled.div``;
@@ -148,10 +153,18 @@ const DescText = styled.p`
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+
+    @media ${deviceMin.tablet} {
+        font-size: 1em;
+    }
 `;
 
 const ImgContainer = styled.div`
     margin: 1em 0;
+
+    @media ${deviceMin.tablet} {
+        margin-left: 1em;
+    }
 `;
 
 const ImgItem = styled.img`
@@ -160,6 +173,10 @@ const ImgItem = styled.img`
     width: 100%;
     border-radius: 1em;
     box-shadow: rgba(13, 56, 72, 1) 1px 5px 8px;
+    @media ${deviceMin.tablet} {
+        box-shadow: rgba(13, 56, 72, 1) 0px 10px 50px;
+        -webkit-box-shadow: rgba(13, 56, 72, 1) 0px 10px 50px;
+    }
 `;
 
 const BuildToolsHeader = styled.h3`
@@ -168,6 +185,11 @@ const BuildToolsHeader = styled.h3`
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+
+    @media ${deviceMin.tablet} {
+        margin: 0.5em 0;
+        font-size: 1em;
+    }
 `;
 
 const BuildToolsContainer = styled.div`
@@ -191,6 +213,7 @@ const DesktopBuildToolsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
 `;
 
 const ToolContainer = styled.div`
@@ -198,6 +221,10 @@ const ToolContainer = styled.div`
     padding: 0.5em 0.5em;
     border-radius: 0.4em;
     /* margin: 0 auto; */
+
+    @media ${deviceMin.tablet} {
+        margin: 0.2em 0.2em;
+    }
 `;
 
 const ButtonContainer = styled.div`
