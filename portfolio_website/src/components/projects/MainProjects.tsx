@@ -29,6 +29,11 @@ const MainHeader = styled.h1`
         margin-bottom: 3em;
         font-size: 1.3em;
     }
+
+    @media ${deviceMin.tablet} {
+        font-size: 2em;
+        margin-bottom: 3em;
+    }
 `;
 
 const MainProjects = () => {
