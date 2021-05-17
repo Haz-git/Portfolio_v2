@@ -1,5 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+    MobileOnlyView,
+    CustomView,
+    isTablet,
+    isDesktop,
+} from 'react-device-detect';
 import { deviceMin } from '../../devices/breakpoints';
 
 //Components:
@@ -101,6 +107,26 @@ const MainProjectContainer = styled.div`
     }
 `;
 
+const DesktopMainProjectContainer = styled.div`
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+
+    @media ${deviceMin.tablet} {
+        padding: 0 5%;
+    }
+
+    @media ${deviceMin.laptopS} {
+        padding: 0 15%;
+    }
+`;
+
+const DesktopProjectDetailsContainer = styled.div`
+    padding: 0 1em;
+`;
+
 const HeaderContainer = styled.div`
     margin: 1em 0;
     text-align: left;
@@ -161,11 +187,17 @@ const BuildToolsContainer = styled.div`
     }
 `;
 
+const DesktopBuildToolsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`;
+
 const ToolContainer = styled.div`
     background: #1b222a;
     padding: 0.5em 0.5em;
     border-radius: 0.4em;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 `;
 
 const ButtonContainer = styled.div`
@@ -275,34 +307,74 @@ const ProjectItem = ({
     };
 
     return (
-        <MainProjectContainer>
-            <HeaderContainer>
-                <MainHeader>{header}</MainHeader>
-            </HeaderContainer>
-            <DescContainer>
-                <DescText>{desc}</DescText>
-            </DescContainer>
-            <ImgContainer>
-                <ImgItem src={image} />
-            </ImgContainer>
-            <BuildToolsHeader>Created with</BuildToolsHeader>
-            <BuildToolsContainer>{findBuildTools()}</BuildToolsContainer>
-            <ButtonContainer>
-                <Button
-                    label="View code"
-                    buttonIcon={<GithubIcon />}
-                    btnBackground="transparent"
-                    btnTextColor="#fdbc3d"
-                />
-                <ButtonSpacing />
-                <Button
-                    label="Test live"
-                    buttonIcon={<PlayIcon />}
-                    btnBackground="#fdbc3d"
-                    btnTextColor="#010d1A"
-                />
-            </ButtonContainer>
-        </MainProjectContainer>
+        <>
+            <MobileOnlyView>
+                <MainProjectContainer>
+                    <HeaderContainer>
+                        <MainHeader>{header}</MainHeader>
+                    </HeaderContainer>
+                    <DescContainer>
+                        <DescText>{desc}</DescText>
+                    </DescContainer>
+                    <ImgContainer>
+                        <ImgItem src={image} />
+                    </ImgContainer>
+                    <BuildToolsHeader>Created with</BuildToolsHeader>
+                    <BuildToolsContainer>
+                        {findBuildTools()}
+                    </BuildToolsContainer>
+                    <ButtonContainer>
+                        <Button
+                            label="View code"
+                            buttonIcon={<GithubIcon />}
+                            btnBackground="transparent"
+                            btnTextColor="#fdbc3d"
+                        />
+                        <ButtonSpacing />
+                        <Button
+                            label="Test live"
+                            buttonIcon={<PlayIcon />}
+                            btnBackground="#fdbc3d"
+                            btnTextColor="#010d1A"
+                        />
+                    </ButtonContainer>
+                </MainProjectContainer>
+            </MobileOnlyView>
+            <CustomView condition={isTablet || isDesktop}>
+                <DesktopMainProjectContainer>
+                    <DesktopProjectDetailsContainer>
+                        <HeaderContainer>
+                            <MainHeader>{header}</MainHeader>
+                        </HeaderContainer>
+                        <DescContainer>
+                            <DescText>{desc}</DescText>
+                        </DescContainer>
+                        <BuildToolsHeader>Created with</BuildToolsHeader>
+                        <DesktopBuildToolsContainer>
+                            {findBuildTools()}
+                        </DesktopBuildToolsContainer>
+                        <ButtonContainer>
+                            <Button
+                                label="View code"
+                                buttonIcon={<GithubIcon />}
+                                btnBackground="transparent"
+                                btnTextColor="#fdbc3d"
+                            />
+                            <ButtonSpacing />
+                            <Button
+                                label="Test live"
+                                buttonIcon={<PlayIcon />}
+                                btnBackground="#fdbc3d"
+                                btnTextColor="#010d1A"
+                            />
+                        </ButtonContainer>
+                    </DesktopProjectDetailsContainer>
+                    <ImgContainer>
+                        <ImgItem src={image} />
+                    </ImgContainer>
+                </DesktopMainProjectContainer>
+            </CustomView>
+        </>
     );
 };
 
