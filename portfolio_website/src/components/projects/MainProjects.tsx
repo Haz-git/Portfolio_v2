@@ -34,6 +34,11 @@ const MainHeader = styled.h1`
         font-size: 2em;
         margin-bottom: 3em;
     }
+
+    @media ${deviceMin.laptopS} {
+        font-size: 2em;
+        margin-bottom: 5em;
+    }
 `;
 
 const MainProjects = () => {
