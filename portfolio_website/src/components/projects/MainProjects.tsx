@@ -5,6 +5,7 @@ import { deviceMin } from '../../devices/breakpoints';
 //Components:
 import ProjectItem from './ProjectItem';
 import gymjotImg from '../../imgs/gymjot_project.png';
+import petriImg from '../../imgs/petri_project.png';
 
 //Styles:
 
@@ -41,25 +42,56 @@ const MainHeader = styled.h1`
     }
 `;
 
+const ProjectItemContainer = styled.div`
+    margin: 2em 0;
+
+    @media ${deviceMin.tablet} {
+        margin: 4em 0;
+    }
+
+    @media ${deviceMin.laptopS} {
+        margin: 8em 0;
+    }
+`;
+
 const MainProjects = () => {
     return (
         <MainContainer>
             <MainHeader>My Projects</MainHeader>
-            <ProjectItem
-                header="GymJot"
-                desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows."
-                image={gymjotImg}
-                buildTools={[
-                    'html',
-                    'css',
-                    'js',
-                    'react',
-                    'redux',
-                    'node',
-                    'mongo',
-                    'express',
-                ]}
-            />
+            <ProjectItemContainer>
+                <ProjectItem
+                    header="GymJot"
+                    desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. This app is still being actively worked on and improved."
+                    image={gymjotImg}
+                    buildTools={[
+                        'html',
+                        'css',
+                        'js',
+                        'react',
+                        'redux',
+                        'node',
+                        'mongo',
+                        'express',
+                    ]}
+                />
+            </ProjectItemContainer>
+            <ProjectItemContainer>
+                <ProjectItem
+                    header="Petri"
+                    desc="Petri is an original, browser-based webapp I developed to increase research workflow and productivity for my lab at UCSD. This app is still being actively worked on and improved."
+                    image={petriImg}
+                    buildTools={[
+                        'html',
+                        'css',
+                        'js',
+                        'react',
+                        'redux',
+                        'node',
+                        'mongo',
+                        'express',
+                    ]}
+                />
+            </ProjectItemContainer>
         </MainContainer>
     );
 };
