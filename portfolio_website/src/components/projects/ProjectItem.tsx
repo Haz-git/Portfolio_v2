@@ -112,7 +112,8 @@ const DesktopMainProjectContainer = styled.div`
     grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
-    margin: 1em 0;
+    justify-items: center;
+    margin: 1em auto;
 
     @media ${deviceMin.tablet} {
         padding: 0 2%;
@@ -121,11 +122,16 @@ const DesktopMainProjectContainer = styled.div`
 
     @media ${deviceMin.laptopS} {
         padding: 0 15%;
+        max-width: 140rem;
     }
 `;
 
 const DesktopProjectDetailsContainer = styled.div`
     padding: 0 1em;
+
+    @media ${deviceMin.laptopS} {
+        max-width: 35rem;
+    }
 `;
 
 const HeaderContainer = styled.div`
@@ -164,6 +170,10 @@ const ImgContainer = styled.div`
 
     @media ${deviceMin.tablet} {
         margin-left: 1em;
+    }
+
+    @media ${deviceMin.laptopS} {
+        max-width: 35rem;
     }
 `;
 
