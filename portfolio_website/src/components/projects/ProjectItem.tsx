@@ -149,6 +149,10 @@ const MainHeader = styled.h2`
     @media ${deviceMin.tablet} {
         font-size: 1.8em;
     }
+
+    @media ${deviceMin.laptopS} {
+        font-size: 2em;
+    }
 `;
 
 const DescContainer = styled.div``;
@@ -163,6 +167,10 @@ const DescText = styled.p`
     @media ${deviceMin.tablet} {
         font-size: 1em;
     }
+
+    @media ${deviceMin.laptopS} {
+        font-size: 1.1em;
+    }
 `;
 
 const ImgContainer = styled.div`
@@ -173,7 +181,7 @@ const ImgContainer = styled.div`
     }
 
     @media ${deviceMin.laptopS} {
-        max-width: 35rem;
+        max-width: 24rem;
     }
 `;
 
