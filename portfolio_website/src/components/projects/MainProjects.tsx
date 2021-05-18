@@ -6,6 +6,7 @@ import { deviceMin } from '../../devices/breakpoints';
 import ProjectItem from './ProjectItem';
 import gymjotImg from '../../imgs/gymjot_project.png';
 import petriImg from '../../imgs/petri_project.png';
+import portfolioImg from '../../imgs/portfolio_project.png';
 
 //Styles:
 
@@ -90,6 +91,14 @@ const MainProjects = () => {
                         'mongo',
                         'express',
                     ]}
+                />
+            </ProjectItemContainer>
+            <ProjectItemContainer>
+                <ProjectItem
+                    header="Portfolio"
+                    desc="This portfolio website was built with a simple and elegant design in mind."
+                    image={portfolioImg}
+                    buildTools={['html', 'css', 'js', 'react']}
                 />
             </ProjectItemContainer>
         </MainContainer>
