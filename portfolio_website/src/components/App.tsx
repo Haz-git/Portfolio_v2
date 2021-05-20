@@ -6,6 +6,7 @@ import GlobalStyle from '../styles/globalStyles';
 import Navbar from './navbar/Navbar';
 import MainHeroContainer from './hero_backdrop/MainHeroContainer';
 import MainProjects from './projects/MainProjects';
+import MainAboutMe from './aboutme/MainAboutMe';
 
 //Styles:
 const MainContainer = styled.div``;
@@ -18,6 +19,7 @@ const App = () => {
                 <Navbar />
                 <MainHeroContainer />
                 <MainProjects />
+                <MainAboutMe />
             </MainContainer>
         </>
     );
