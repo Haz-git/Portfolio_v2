@@ -8,6 +8,7 @@ import DrawerComponent from './DrawerComponent';
 //Styles:
 const MainContainer = styled.section`
     margin-top: 5em;
+    padding: 0 1em;
 `;
 
 const MainAboutMe = () => {

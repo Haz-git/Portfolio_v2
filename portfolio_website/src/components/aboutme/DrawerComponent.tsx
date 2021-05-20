@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 //Styles:
-const MainContainer = styled.div``;
+const MainContainer = styled.div`
+    background: #1b222a;
+    padding: 1em 1em;
+    border-radius: 0.5em;
+`;
 
 const QuestionContainer = styled.div``;
 
