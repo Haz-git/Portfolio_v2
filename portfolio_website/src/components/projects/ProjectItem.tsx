@@ -108,14 +108,17 @@ const MainProjectContainer = styled.div`
 `;
 
 const DesktopMainProjectContainer = styled.div`
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-items: center;
-    margin: 1em auto;
 
     @media ${deviceMin.tablet} {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin: 1em auto;
         padding: 0 2%;
         grid-template-columns: 50% 50%;
     }
@@ -174,6 +177,7 @@ const DescText = styled.p`
 `;
 
 const ImgContainer = styled.div`
+    max-width: 27rem;
     margin: 1em 0;
 
     @media ${deviceMin.tablet} {
@@ -198,11 +202,12 @@ const ImgItem = styled.img`
 `;
 
 const BuildToolsHeader = styled.h3`
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 0.9em;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
+    font-weight: 900;
+    color: #fdbc3d;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    margin: 0.5em 0;
 
     @media ${deviceMin.tablet} {
         margin: 0.5em 0;
@@ -238,6 +243,7 @@ const ToolContainer = styled.div`
     background: #1b222a;
     padding: 0.5em 0.5em;
     border-radius: 0.4em;
+    margin: 0.2em 0.2em;
     /* margin: 0 auto; */
 
     @media ${deviceMin.tablet} {
