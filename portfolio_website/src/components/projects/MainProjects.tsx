@@ -95,7 +95,7 @@ const MainProjects = () => {
             </ProjectItemContainer>
             <ProjectItemContainer>
                 <ProjectItem
-                    header="Portfolio"
+                    header="My Personal Website"
                     desc="This portfolio website was built with a simple and elegant design in mind. Additionally, creating this website was an introduction to Typescript."
                     image={portfolioImg}
                     buildTools={['html', 'css', 'js', 'ts', 'react']}
