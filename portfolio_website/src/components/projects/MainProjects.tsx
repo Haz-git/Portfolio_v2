@@ -19,7 +19,7 @@ const MainContainer = styled.section`
     }
 `;
 
-const MainHeader = styled.h1`
+export const MainHeader = styled.h1`
     font-family: 'Lato', sans-serif;
     font-size: 2em;
     font-weight: 900;
@@ -62,7 +62,7 @@ const MainProjects = () => {
             <ProjectItemContainer>
                 <ProjectItem
                     header="GymJot"
-                    desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. This app is still being actively worked on and improved."
+                    desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. This app is ongoing, actively worked on, and improved."
                     image={gymjotImg}
                     buildTools={[
                         'html',
@@ -79,7 +79,7 @@ const MainProjects = () => {
             <ProjectItemContainer>
                 <ProjectItem
                     header="Petri"
-                    desc="Petri is an original, browser-based webapp I developed to increase research workflow and productivity for my lab at UCSD. This app is still being actively worked on and improved."
+                    desc="Petri is an original, browser-based webapp I developed to increase research workflow and productivity for my lab at UCSD. This app is ongoing, actively worked on, and improved."
                     image={petriImg}
                     buildTools={[
                         'html',
