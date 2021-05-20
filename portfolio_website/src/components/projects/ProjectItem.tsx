@@ -293,63 +293,63 @@ const ProjectItem = ({
                                 <HtmlIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'css':
                         return (
                             <ToolContainer>
                                 <CssIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'js':
                         return (
                             <ToolContainer>
                                 <JavascriptIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'react':
                         return (
                             <ToolContainer>
                                 <ReactIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'redux':
                         return (
                             <ToolContainer>
                                 <ReduxIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'ts':
                         return (
                             <ToolContainer>
                                 <TypescriptIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'node':
                         return (
                             <ToolContainer>
                                 <NodeIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'mongo':
                         return (
                             <ToolContainer>
                                 <MongoIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     case 'express':
                         return (
                             <ToolContainer>
                                 <ExpressIcon />
                             </ToolContainer>
                         );
-                        break;
+
                     default:
                         return null;
                 }
