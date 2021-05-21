@@ -11,15 +11,19 @@ const MainContainer = styled.section`
     margin-top: 5em;
     padding: 0 1em;
 
-    /* @media ${deviceMin.tablet} {
-        text-align: 
-    } */
+    @media ${deviceMin.laptopS} {
+        padding: 0 15%;
+    }
 `;
 
-const MainDrawerContainer = styled.div``;
+const MainDrawerContainer = styled.div`
+    @media ${deviceMin.tablet} {
+        padding: 0 2rem;
+    }
+`;
 
 const DrawerContainer = styled.div`
-    margin: 0.5em 0;
+    margin: 0.8em 0;
 `;
 
 const MainAboutMe = () => {
@@ -35,8 +39,8 @@ const MainAboutMe = () => {
                 </DrawerContainer>
                 <DrawerContainer>
                     <DrawerComponent
-                        question="Why did you learn code as a Microbiologist?"
-                        answer="During my microbiology career, I dabbled in bioinformatics. Through bioinformatics and my current job, I started tinkering with code more and fell in love. The rest is history!"
+                        question="Why did you learn to code?"
+                        answer="During my microbiology career, I dabbled in bioinformatics. Through bioinformatics and my current job, I started tinkering with code more often and fell in love. The rest is history!"
                     />
                 </DrawerContainer>
                 <DrawerContainer>
