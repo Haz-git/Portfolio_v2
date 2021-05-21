@@ -22,16 +22,21 @@ const QuestionContainer = styled.div`
 
 const QuestionText = styled.p`
     font-family: 'Lato', sans-serif;
-    font-size: 0.8rem;
-    color: white;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    font-weight: 700;
 
     @media ${deviceMin.mobileM} {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     @media ${deviceMin.mobileL} {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+    }
+
+    @media ${deviceMin.tablet} {
+        font-size: 1.5rem;
     }
 `;
 
@@ -41,16 +46,21 @@ const AnswerContainer = styled.div`
 
 const AnswerText = styled.p`
     font-family: 'Lato', sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    font-weight: 700;
 
     @media ${deviceMin.mobileM} {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     @media ${deviceMin.mobileL} {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+    }
+
+    @media ${deviceMin.tablet} {
+        font-size: 1.5rem;
     }
 `;
 
