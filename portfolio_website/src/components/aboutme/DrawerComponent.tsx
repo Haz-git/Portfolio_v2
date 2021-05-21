@@ -31,7 +31,7 @@ const QuestionText = styled.p`
     }
 
     @media ${deviceMin.mobileL} {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 `;
 
@@ -50,7 +50,7 @@ const AnswerText = styled.p`
     }
 
     @media ${deviceMin.mobileL} {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 `;
 
