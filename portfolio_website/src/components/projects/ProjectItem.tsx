@@ -127,6 +127,14 @@ const DesktopMainProjectContainer = styled.div`
         padding: 0 15%;
         max-width: 140rem;
     }
+
+    @media ${deviceMin.laptop} {
+        padding: 0 10%;
+    }
+
+    @media ${deviceMin.laptopL} {
+        padding: 0 15%;
+    }
 `;
 
 const DesktopProjectDetailsContainer = styled.div`
