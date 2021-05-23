@@ -51,6 +51,12 @@ const MainAboutMe = () => {
                 </DrawerContainer>
                 <DrawerContainer>
                     <DrawerComponent
+                        question="What's important to you in tech?"
+                        answer="Growth, mentorship, and challenge."
+                    />
+                </DrawerContainer>
+                <DrawerContainer>
+                    <DrawerComponent
                         question="Are you available for hire?"
                         answer="I'm presently working as a Systems Integration Engineer III in my role at UCSD Research IT Services. However, I'm always open to discuss new opportunities. Don't hesitate to reach out!"
                     />
