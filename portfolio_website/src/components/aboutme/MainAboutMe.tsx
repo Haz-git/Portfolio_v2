@@ -52,7 +52,7 @@ const MainAboutMe = () => {
                 <DrawerContainer>
                     <DrawerComponent
                         question="What's important to you in tech?"
-                        answer="Growth, mentorship, and challenge."
+                        answer="Growth, mentorship, and challenge are some qualities I look for in a career."
                     />
                 </DrawerContainer>
                 <DrawerContainer>
