@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
+    html {
+        height: 100vh;
+    }
+
     body {
         background: #010d1A;
 
