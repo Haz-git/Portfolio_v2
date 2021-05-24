@@ -33,6 +33,8 @@ const ArrowIcon = styled(DownArrow)`
 const MainContainer = styled.section`
     background: inherit;
     height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 `;
 
 const HeroItemContainer = styled.div`
