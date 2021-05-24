@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
+import { isMobileOnly } from 'react-device-detect';
+import Div100vh from 'react-div-100vh';
 
 //Components:
 import Herotext from './Herotext';
@@ -33,8 +35,6 @@ const ArrowIcon = styled(DownArrow)`
 const MainContainer = styled.section`
     background: inherit;
     height: 100vh;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
 `;
 
 const HeroItemContainer = styled.div`
@@ -138,19 +138,39 @@ const ProjectsText = styled.p`
 
 const MainHeroContainer = () => {
     return (
-        <MainContainer>
-            <HeroItemContainer>
-                <Herotext />
-                <HeroImg src={heroimg} />
-            </HeroItemContainer>
-            <ProjectsArrowContainer>
-                <ProjectsText>
-                    <ArrowIcon />
-                    Check out my work
-                    <ArrowIcon />
-                </ProjectsText>
-            </ProjectsArrowContainer>
-        </MainContainer>
+        <>
+            {isMobileOnly === true ? (
+                <Div100vh>
+                    <MainContainer>
+                        <HeroItemContainer>
+                            <Herotext />
+                            <HeroImg src={heroimg} />
+                        </HeroItemContainer>
+                        <ProjectsArrowContainer>
+                            <ProjectsText>
+                                <ArrowIcon />
+                                Check out my work
+                                <ArrowIcon />
+                            </ProjectsText>
+                        </ProjectsArrowContainer>
+                    </MainContainer>
+                </Div100vh>
+            ) : (
+                <MainContainer>
+                    <HeroItemContainer>
+                        <Herotext />
+                        <HeroImg src={heroimg} />
+                    </HeroItemContainer>
+                    <ProjectsArrowContainer>
+                        <ProjectsText>
+                            <ArrowIcon />
+                            Check out my work
+                            <ArrowIcon />
+                        </ProjectsText>
+                    </ProjectsArrowContainer>
+                </MainContainer>
+            )}
+        </>
     );
 };
 
