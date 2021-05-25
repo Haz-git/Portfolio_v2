@@ -96,15 +96,7 @@ const ExpressIcon = styled(Express)`
 //Styles:
 
 const MainProjectContainer = styled.div`
-    margin: 1em 0;
-
-    @media ${deviceMin.tablet} {
-        padding: 0 5%;
-    }
-
-    @media ${deviceMin.laptopS} {
-        padding: 0 15%;
-    }
+    margin: 6rem 0;
 `;
 
 const DesktopMainProjectContainer = styled.div`
@@ -157,6 +149,14 @@ const MainHeader = styled.h2`
     color: #ffffff;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
 
+    @media ${deviceMin.mobileM} {
+        font-size: 1.5em;
+    }
+
+    @media ${deviceMin.mobileL} {
+        font-size: 1.6em;
+    }
+
     @media ${deviceMin.tablet} {
         font-size: 1.8em;
     }
@@ -174,6 +174,14 @@ const DescText = styled.p`
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+
+    @media ${deviceMin.mobileM} {
+        font-size: 1em;
+    }
+
+    @media ${deviceMin.mobileL} {
+        font-size: 1em;
+    }
 
     @media ${deviceMin.tablet} {
         font-size: 1em;
