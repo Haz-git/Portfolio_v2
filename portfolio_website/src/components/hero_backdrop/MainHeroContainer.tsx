@@ -37,6 +37,11 @@ const MainContainer = styled.section`
     height: 100vh;
 `;
 
+const MainMobileContainer = styled.section`
+    background: inherit;
+    height: 100%;
+`;
+
 const HeroItemContainer = styled.div`
     display: flex;
     align-items: center;
@@ -141,7 +146,7 @@ const MainHeroContainer = () => {
         <>
             {isMobileOnly === true ? (
                 <Div100vh>
-                    <MainContainer>
+                    <MainMobileContainer>
                         <HeroItemContainer>
                             <Herotext />
                             <HeroImg src={heroimg} />
@@ -153,7 +158,7 @@ const MainHeroContainer = () => {
                                 <ArrowIcon />
                             </ProjectsText>
                         </ProjectsArrowContainer>
-                    </MainContainer>
+                    </MainMobileContainer>
                 </Div100vh>
             ) : (
                 <MainContainer>
