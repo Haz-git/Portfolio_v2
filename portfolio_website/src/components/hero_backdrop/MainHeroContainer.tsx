@@ -182,13 +182,6 @@ const MainHeroContainer = () => {
                         <Herotext />
                         <HeroImg src={heroimg} />
                     </HeroItemMobileContainer>
-                    <ProjectsArrowContainer>
-                        {/* <ProjectsText>
-                            <ArrowIcon />
-                            Check out my work
-                            <ArrowIcon />
-                        </ProjectsText> */}
-                    </ProjectsArrowContainer>
                 </MainMobileContainer>
             ) : (
                 <MainContainer>
