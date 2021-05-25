@@ -39,7 +39,7 @@ const MainContainer = styled.section`
 
 const MainMobileContainer = styled.section`
     background: inherit;
-    height: 100%;
+    /* height: 100%; */
 `;
 
 const HeroItemContainer = styled.div`
@@ -59,6 +59,38 @@ const HeroItemContainer = styled.div`
         display: flex;
         flex-direction: column-reverse;
         padding: 0 1em;
+    }
+
+    @media ${deviceMin.tablet} {
+        flex-direction: row;
+        padding: 0 2%;
+    }
+`;
+
+const HeroItemMobileContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 15%;
+    margin: 2rem 0rem 5rem 0rem;
+
+    @media ${deviceMin.mobileS} {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 1em;
+    }
+
+    @media ${deviceMin.mobileM} {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 3rem 0rem 7rem 0rem;
+    }
+
+    @media ${deviceMin.mobileL} {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 3rem 0rem 7rem 0rem;
     }
 
     @media ${deviceMin.tablet} {
@@ -145,21 +177,19 @@ const MainHeroContainer = () => {
     return (
         <>
             {isMobileOnly === true ? (
-                <Div100vh>
-                    <MainMobileContainer>
-                        <HeroItemContainer>
-                            <Herotext />
-                            <HeroImg src={heroimg} />
-                        </HeroItemContainer>
-                        <ProjectsArrowContainer>
-                            <ProjectsText>
-                                <ArrowIcon />
-                                Check out my work
-                                <ArrowIcon />
-                            </ProjectsText>
-                        </ProjectsArrowContainer>
-                    </MainMobileContainer>
-                </Div100vh>
+                <MainMobileContainer>
+                    <HeroItemMobileContainer>
+                        <Herotext />
+                        <HeroImg src={heroimg} />
+                    </HeroItemMobileContainer>
+                    <ProjectsArrowContainer>
+                        {/* <ProjectsText>
+                            <ArrowIcon />
+                            Check out my work
+                            <ArrowIcon />
+                        </ProjectsText> */}
+                    </ProjectsArrowContainer>
+                </MainMobileContainer>
             ) : (
                 <MainContainer>
                     <HeroItemContainer>
