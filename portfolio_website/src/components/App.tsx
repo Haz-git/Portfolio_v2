@@ -7,6 +7,7 @@ import Navbar from './navbar/Navbar';
 import MainHeroContainer from './hero_backdrop/MainHeroContainer';
 import MainProjects from './projects/MainProjects';
 import MainAboutMe from './aboutme/MainAboutMe';
+import MainContactMeForm from './contactme/MainContactMeForm';
 
 //Styles:
 const MainContainer = styled.div``;
@@ -20,6 +21,7 @@ const App = () => {
                 <MainHeroContainer />
                 <MainProjects />
                 <MainAboutMe />
+                <MainContactMeForm />
             </MainContainer>
         </>
     );
