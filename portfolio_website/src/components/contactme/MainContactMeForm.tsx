@@ -5,6 +5,7 @@ import { deviceMin } from '../../devices/breakpoints';
 //Components:
 import { MainHeader } from '../projects/MainProjects';
 import InputField from './InputField';
+import Button from '../hero_backdrop/Button';
 
 //Styles:
 
@@ -74,6 +75,10 @@ const InputTextArea = styled.textarea`
     resize: none;
 `;
 
+const ButtonContainer = styled.div`
+    margin: 1em 0;
+`;
+
 //Render:
 
 const MainContactMeForm = () => {
@@ -101,6 +106,13 @@ const MainContactMeForm = () => {
                     <InputTextArea rows={10} />
                 </InputContainer>
             </InputFieldsContainer>
+            <ButtonContainer>
+                <Button
+                    label="Send"
+                    btnTextColor="inherit"
+                    btnBackground="#fdbc3d"
+                />
+            </ButtonContainer>
         </MainContainer>
     );
 };
