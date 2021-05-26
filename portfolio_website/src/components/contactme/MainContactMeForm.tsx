@@ -4,6 +4,7 @@ import { deviceMin } from '../../devices/breakpoints';
 
 //Components:
 import { MainHeader } from '../projects/MainProjects';
+import InputField from './InputField';
 
 //Styles:
 
@@ -45,6 +46,20 @@ const MainDesc = styled.p`
     }
 `;
 
+const InputFieldsContainer = styled.div``;
+
+const InputContainer = styled.div``;
+
+const InputDesc = styled.p`
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #fdbc3d;
+    text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    text-align: left;
+    margin: 0.5em 0;
+`;
+
 //Render:
 
 const MainContactMeForm = () => {
@@ -58,6 +73,20 @@ const MainContactMeForm = () => {
                     and let's talk!
                 </MainDesc>
             </DescContainer>
+            <InputFieldsContainer>
+                <InputContainer>
+                    <InputDesc>Name</InputDesc>
+                    <InputField />
+                </InputContainer>
+                <InputContainer>
+                    <InputDesc>Email Address</InputDesc>
+                    <InputField />
+                </InputContainer>
+                <InputContainer>
+                    <InputDesc>Your Message</InputDesc>
+                    <InputField />
+                </InputContainer>
+            </InputFieldsContainer>
         </MainContainer>
     );
 };
