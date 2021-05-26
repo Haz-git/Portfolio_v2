@@ -60,6 +60,20 @@ const InputDesc = styled.p`
     margin: 0.5em 0;
 `;
 
+const InputTextArea = styled.textarea`
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    text-shadow: rgba(0, 0, 0, 1) 0px 3px 1px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    background: #1b222a;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    resize: none;
+`;
+
 //Render:
 
 const MainContactMeForm = () => {
@@ -84,7 +98,7 @@ const MainContactMeForm = () => {
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Your Message</InputDesc>
-                    <InputField />
+                    <InputTextArea rows={10} />
                 </InputContainer>
             </InputFieldsContainer>
         </MainContainer>
