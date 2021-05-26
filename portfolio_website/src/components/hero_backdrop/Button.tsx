@@ -28,6 +28,7 @@ const ButtonContainer = styled.button<ButtonProps>`
         f rgba(13, 56, 72, 0.22) 0px 4px 12px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    width: 100%;
 
     &:hover {
         transform: scale(1.05);
