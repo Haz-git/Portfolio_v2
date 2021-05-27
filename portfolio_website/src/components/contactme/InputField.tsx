@@ -20,11 +20,14 @@ const TextInput = styled.input`
 //Styles:
 
 //Render:
+interface InputFieldProps {
+    type?: string;
+}
 
-const InputField = () => {
+const InputField = ({ type }: InputFieldProps): JSX.Element => {
     return (
         <MainContainer>
-            <TextInput />
+            <TextInput type={type} />
         </MainContainer>
     );
 };
