@@ -8,6 +8,7 @@ import MainHeroContainer from './hero_backdrop/MainHeroContainer';
 import MainProjects from './projects/MainProjects';
 import MainAboutMe from './aboutme/MainAboutMe';
 import MainContactMeForm from './contactme/MainContactMeForm';
+import MainFooter from './footer/MainFooter';
 
 //Styles:
 const MainContainer = styled.div``;
@@ -22,6 +23,7 @@ const App = () => {
                 <MainProjects />
                 <MainAboutMe />
                 <MainContactMeForm />
+                <MainFooter />
             </MainContainer>
         </>
     );
