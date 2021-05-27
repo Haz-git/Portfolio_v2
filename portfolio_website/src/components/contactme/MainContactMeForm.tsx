@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
 
@@ -82,6 +82,11 @@ const ButtonContainer = styled.div`
 //Render:
 
 const MainContactMeForm = () => {
+    //States:
+    const [userName, setUserName] = useState('');
+    const [userEmail, setUserEmail] = useState('');
+    const [userMessage, setUserMessage] = useState('');
+
     return (
         <MainContainer>
             <ContactHeader>Send me stuff</ContactHeader>
@@ -99,7 +104,7 @@ const MainContactMeForm = () => {
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Email Address</InputDesc>
-                    <InputField />
+                    <InputField type="email" />
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Your Message</InputDesc>
