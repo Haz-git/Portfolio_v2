@@ -22,12 +22,13 @@ const TextInput = styled.input`
 //Render:
 interface InputFieldProps {
     type?: string;
+    onUserChange?: React.ChangeEventHandler;
 }
 
-const InputField = ({ type }: InputFieldProps): JSX.Element => {
+const InputField = ({ type, onUserChange }: InputFieldProps): JSX.Element => {
     return (
         <MainContainer>
-            <TextInput type={type} />
+            <TextInput type={type} onChange={onUserChange} />
         </MainContainer>
     );
 };
