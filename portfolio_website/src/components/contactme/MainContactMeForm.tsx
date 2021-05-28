@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
 
@@ -6,6 +6,8 @@ import { deviceMin } from '../../devices/breakpoints';
 import { MainHeader } from '../projects/MainProjects';
 import InputField from './InputField';
 import Button from '../hero_backdrop/Button';
+import * as EmailValidator from 'email-validator';
+import * as emailjs from 'emailjs-com';
 
 //Styles:
 
@@ -89,18 +91,56 @@ const MainContactMeForm = () => {
 
     //Form handlers:
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.value);
         setUserName(e.target.value);
     };
 
     const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.value);
         setUserEmail(e.target.value);
     };
 
     const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        console.log(e.target.value);
         setUserMessage(e.target.value);
+    };
+
+    //Empty Checker:
+
+    const checkEmptyValues = () => {
+        if (userName === '' || userEmail === '' || userMessage === '') {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    //EmailJS setup:
+    let templateParams = {
+        user_email: userEmail,
+        from_name: userName,
+        to_name: 'Harry',
+        message: userMessage,
+    };
+
+    //helper form resetter:
+    const resetForm = () => {
+        setUserName('');
+        setUserEmail('');
+        setUserMessage('');
+    };
+
+    //Submit Handler:
+    const submitEmailMessage = () => {
+        if (checkEmptyValues() && EmailValidator.validate(userEmail)) {
+            emailjs.send(
+                'personal_website_v2',
+                'template_1kalp2u',
+                templateParams,
+                'user_1eDpqP05zoCB3CLCEncXA'
+            );
+
+            resetForm();
+        } else {
+            console.log('Something wrong occurred!');
+        }
     };
 
     return (
@@ -135,6 +175,7 @@ const MainContactMeForm = () => {
                     label="Send"
                     btnTextColor="inherit"
                     btnBackground="#fdbc3d"
+                    onClick={submitEmailMessage}
                 />
             </ButtonContainer>
         </MainContainer>
