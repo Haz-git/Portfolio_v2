@@ -6,7 +6,7 @@ import { deviceMax, deviceMin } from '../../devices/breakpoints';
 interface ButtonProps {
     label?: string;
     isLink?: boolean;
-    onClick?: Function;
+    onClick?: React.MouseEventHandler;
     buttonIcon?: JSX.Element;
     btnBackground?: string;
     btnTextColor?: string;
@@ -81,6 +81,7 @@ const Button = ({
         <ButtonContainer
             btnBackground={btnBackground}
             btnTextColor={btnTextColor}
+            onClick={onClick}
         >
             {buttonIcon && <IconContainer>{buttonIcon}</IconContainer>}
             <ButtonText>{label}</ButtonText>
