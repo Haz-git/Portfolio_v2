@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
 
@@ -87,6 +87,22 @@ const MainContactMeForm = () => {
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
 
+    //Form handlers:
+    const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.value);
+        setUserName(e.target.value);
+    };
+
+    const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.value);
+        setUserEmail(e.target.value);
+    };
+
+    const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        console.log(e.target.value);
+        setUserMessage(e.target.value);
+    };
+
     return (
         <MainContainer>
             <ContactHeader>Send me stuff</ContactHeader>
@@ -100,15 +116,18 @@ const MainContactMeForm = () => {
             <InputFieldsContainer>
                 <InputContainer>
                     <InputDesc>Name</InputDesc>
-                    <InputField />
+                    <InputField onUserChange={handleName} />
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Email Address</InputDesc>
-                    <InputField type="email" />
+                    <InputField type="email" onUserChange={handleEmail} />
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Your Message</InputDesc>
-                    <InputTextArea rows={10} />
+                    <InputTextArea
+                        rows={10}
+                        onChange={(e) => handleMessage(e)}
+                    />
                 </InputContainer>
             </InputFieldsContainer>
             <ButtonContainer>
