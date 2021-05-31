@@ -156,9 +156,20 @@ const MainContactMeForm = () => {
             resetForm();
             alert('Your email message has been sent!');
         } else {
-            setNameError(true);
-            setEmailError(true);
-            setMsgError(true);
+            if (userName === '' && userEmail === '' && userMessage === '') {
+                setNameError(true);
+                setEmailError(true);
+                setMsgError(true);
+            } else if (userName === '') {
+                setNameError(true);
+            } else if (
+                userEmail === '' ||
+                !EmailValidator.validate(userEmail)
+            ) {
+                setEmailError(true);
+            } else if (userMessage === '') {
+                setMsgError(true);
+            }
         }
     };
 
