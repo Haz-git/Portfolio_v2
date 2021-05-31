@@ -63,7 +63,7 @@ const InputDesc = styled.p`
     margin: 0.5em 0;
 `;
 
-const InputTextArea = styled.textarea`
+const InputTextArea = styled.textarea<InputTextFieldType>`
     width: 100%;
     padding: 0.5em 1em;
     border-radius: 0.3em;
@@ -75,11 +75,22 @@ const InputTextArea = styled.textarea`
     font-weight: 700;
     font-size: 1em;
     resize: none;
+    transition: all 0.2s ease-in-out;
+    border: ${(InputTextFieldType) =>
+        InputTextFieldType.inputValueError === false
+            ? '1px solid #1b222a'
+            : '1px solid red'};
 `;
 
 const ButtonContainer = styled.div`
     margin: 1em 0;
 `;
+
+//Type for styled-component
+
+interface InputTextFieldType {
+    inputValueError?: boolean;
+}
 
 //Render:
 
@@ -147,6 +158,7 @@ const MainContactMeForm = () => {
         } else {
             setNameError(true);
             setEmailError(true);
+            setMsgError(true);
         }
     };
 
@@ -184,6 +196,7 @@ const MainContactMeForm = () => {
                         rows={10}
                         onChange={(e) => handleMessage(e)}
                         value={userMessage}
+                        inputValueError={msgError}
                     />
                 </InputContainer>
             </InputFieldsContainer>
