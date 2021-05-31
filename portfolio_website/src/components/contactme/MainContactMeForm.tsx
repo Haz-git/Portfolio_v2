@@ -89,6 +89,11 @@ const MainContactMeForm = () => {
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
 
+    //Error states:
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [msgError, setMsgError] = useState(false);
+
     //Form handlers:
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserName(e.target.value);
@@ -140,7 +145,8 @@ const MainContactMeForm = () => {
             resetForm();
             alert('Your email message has been sent!');
         } else {
-            alert('Please make sure you fill out all the fields!');
+            setNameError(true);
+            setEmailError(true);
         }
     };
 
@@ -160,6 +166,7 @@ const MainContactMeForm = () => {
                     <InputField
                         onUserChange={handleName}
                         inputValue={userName}
+                        inputValueError={nameError}
                     />
                 </InputContainer>
                 <InputContainer>
@@ -168,6 +175,7 @@ const MainContactMeForm = () => {
                         type="email"
                         onUserChange={handleEmail}
                         inputValue={userEmail}
+                        inputValueError={emailError}
                     />
                 </InputContainer>
                 <InputContainer>
