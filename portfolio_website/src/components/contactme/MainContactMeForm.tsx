@@ -138,8 +138,9 @@ const MainContactMeForm = () => {
             );
 
             resetForm();
+            alert('Your email message has been sent!');
         } else {
-            console.log('Something wrong occurred!');
+            alert('Please make sure you fill out all the fields!');
         }
     };
 
@@ -156,17 +157,25 @@ const MainContactMeForm = () => {
             <InputFieldsContainer>
                 <InputContainer>
                     <InputDesc>Name</InputDesc>
-                    <InputField onUserChange={handleName} />
+                    <InputField
+                        onUserChange={handleName}
+                        inputValue={userName}
+                    />
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Email Address</InputDesc>
-                    <InputField type="email" onUserChange={handleEmail} />
+                    <InputField
+                        type="email"
+                        onUserChange={handleEmail}
+                        inputValue={userEmail}
+                    />
                 </InputContainer>
                 <InputContainer>
                     <InputDesc>Your Message</InputDesc>
                     <InputTextArea
                         rows={10}
                         onChange={(e) => handleMessage(e)}
+                        value={userMessage}
                     />
                 </InputContainer>
             </InputFieldsContainer>
