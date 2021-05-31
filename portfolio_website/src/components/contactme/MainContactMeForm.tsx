@@ -95,12 +95,13 @@ interface InputTextFieldType {
 //Render:
 
 const MainContactMeForm = () => {
-    //States:
+    //States for forms:
     const [userName, setUserName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
+    const [isEmailSent, setIsEmailSent] = useState(false);
 
-    //Error states:
+    //Error states for forms:
     const [nameError, setNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [msgError, setMsgError] = useState(false);
