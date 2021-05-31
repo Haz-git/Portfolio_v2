@@ -4,7 +4,7 @@ import styled from 'styled-components';
 //Components:
 const MainContainer = styled.div``;
 
-const TextInput = styled.input`
+const TextInput = styled.input<InputFieldProps>`
     width: 100%;
     padding: 0.5em 1em;
     border-radius: 0.3em;
@@ -15,6 +15,8 @@ const TextInput = styled.input`
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 1em;
+    border: ${(InputFieldProps) =>
+        InputFieldProps.inputValueError === false ? 'none' : 'red'};
 `;
 
 //Styles:
@@ -24,16 +26,23 @@ interface InputFieldProps {
     type?: string;
     onUserChange?: React.ChangeEventHandler;
     inputValue?: string;
+    inputValueError?: boolean;
 }
 
 const InputField = ({
     type,
     onUserChange,
     inputValue,
+    inputValueError,
 }: InputFieldProps): JSX.Element => {
     return (
         <MainContainer>
-            <TextInput type={type} onChange={onUserChange} value={inputValue} />
+            <TextInput
+                type={type}
+                onChange={onUserChange}
+                value={inputValue}
+                inputValueError={inputValueError}
+            />
         </MainContainer>
     );
 };
