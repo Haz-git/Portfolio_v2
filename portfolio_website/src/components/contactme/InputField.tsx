@@ -16,7 +16,7 @@ const TextInput = styled.input<InputFieldProps>`
     font-weight: 700;
     font-size: 1em;
     border: ${(InputFieldProps) =>
-        InputFieldProps.inputValueError === false ? 'none' : 'red'};
+        InputFieldProps.inputValueError === false ? 'none' : '1px solid red'};
 `;
 
 //Styles:
