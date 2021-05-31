@@ -107,14 +107,17 @@ const MainContactMeForm = () => {
 
     //Form handlers:
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (nameError === true) setNameError(!nameError);
         setUserName(e.target.value);
     };
 
     const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (emailError === true) setEmailError(!emailError);
         setUserEmail(e.target.value);
     };
 
     const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        if (msgError === true) setMsgError(!msgError);
         setUserMessage(e.target.value);
     };
 
