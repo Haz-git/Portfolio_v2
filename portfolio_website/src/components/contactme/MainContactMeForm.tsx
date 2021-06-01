@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
+import { isMobileOnly } from 'react-device-detect';
 
 //Components:
 import { MainHeader } from '../projects/MainProjects';
@@ -109,15 +110,21 @@ const InputTextArea = styled.textarea<InputTextFieldType>`
     }
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.div<ButtonContainerProps>`
     margin: 1em auto;
-    max-width: 15rem;
+
+    max-width: ${(ButtonContainerProps) =>
+        ButtonContainerProps.isMobileDevice === false ? '15rem' : '100%'};
 `;
 
 //Type for styled-component
 
 interface InputTextFieldType {
     inputValueError?: boolean;
+}
+
+interface ButtonContainerProps {
+    isMobileDevice?: boolean;
 }
 
 //Render:
@@ -242,7 +249,7 @@ const MainContactMeForm = () => {
                     />
                 </InputContainer>
             </InputFieldsContainer>
-            <ButtonContainer>
+            <ButtonContainer isMobileDevice={isMobileOnly}>
                 <Button
                     label="Send"
                     btnTextColor="inherit"
