@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
 import { isMobileOnly } from 'react-device-detect';
+import { Element } from 'react-scroll';
 
 //Components:
 import { MainHeader } from '../projects/MainProjects';
@@ -212,54 +213,56 @@ const MainContactMeForm = () => {
     };
 
     return (
-        <MainContainer>
-            <ContactHeader>Send me stuff</ContactHeader>
-            <DescContainer>
-                <MainDesc>
-                    Want to know how I built my projects? Do you have an
-                    interesting project we can collaborate on? Send me an email
-                    and let's talk!
-                </MainDesc>
-            </DescContainer>
-            <InputFieldsContainer>
-                <InputContainer>
-                    <InputDesc>Name</InputDesc>
-                    <InputField
-                        onUserChange={handleName}
-                        inputValue={userName}
-                        inputValueError={nameError}
+        <Element name="contactformcontainer">
+            <MainContainer>
+                <ContactHeader>Send me stuff</ContactHeader>
+                <DescContainer>
+                    <MainDesc>
+                        Want to know how I built my projects? Do you have an
+                        interesting project we can collaborate on? Send me an
+                        email and let's talk!
+                    </MainDesc>
+                </DescContainer>
+                <InputFieldsContainer>
+                    <InputContainer>
+                        <InputDesc>Name</InputDesc>
+                        <InputField
+                            onUserChange={handleName}
+                            inputValue={userName}
+                            inputValueError={nameError}
+                        />
+                    </InputContainer>
+                    <InputContainer>
+                        <InputDesc>Email Address</InputDesc>
+                        <InputField
+                            type="email"
+                            onUserChange={handleEmail}
+                            inputValue={userEmail}
+                            inputValueError={emailError}
+                        />
+                    </InputContainer>
+                    <InputContainer>
+                        <InputDesc>Your Message</InputDesc>
+                        <InputTextArea
+                            rows={10}
+                            onChange={(e) => handleMessage(e)}
+                            value={userMessage}
+                            inputValueError={msgError}
+                        />
+                    </InputContainer>
+                </InputFieldsContainer>
+                <ButtonContainer isMobileDevice={isMobileOnly}>
+                    <Button
+                        label="Send"
+                        btnTextColor="inherit"
+                        btnBackground="#fdbc3d"
+                        onClick={submitEmailMessage}
+                        isDisabled={isEmailSent}
+                        onDisabledText="Email Sent!"
                     />
-                </InputContainer>
-                <InputContainer>
-                    <InputDesc>Email Address</InputDesc>
-                    <InputField
-                        type="email"
-                        onUserChange={handleEmail}
-                        inputValue={userEmail}
-                        inputValueError={emailError}
-                    />
-                </InputContainer>
-                <InputContainer>
-                    <InputDesc>Your Message</InputDesc>
-                    <InputTextArea
-                        rows={10}
-                        onChange={(e) => handleMessage(e)}
-                        value={userMessage}
-                        inputValueError={msgError}
-                    />
-                </InputContainer>
-            </InputFieldsContainer>
-            <ButtonContainer isMobileDevice={isMobileOnly}>
-                <Button
-                    label="Send"
-                    btnTextColor="inherit"
-                    btnBackground="#fdbc3d"
-                    onClick={submitEmailMessage}
-                    isDisabled={isEmailSent}
-                    onDisabledText="Email Sent!"
-                />
-            </ButtonContainer>
-        </MainContainer>
+                </ButtonContainer>
+            </MainContainer>
+        </Element>
     );
 };
 
