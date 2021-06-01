@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { deviceMin } from '../../devices/breakpoints';
 
 //Components:
 const MainContainer = styled.div``;
@@ -21,6 +22,13 @@ const TextInput = styled.input<InputFieldProps>`
             : '1px solid red'};
 
     transition: all 0.2s ease-in-out;
+    @media ${deviceMin.tablet} {
+        font-size: 1.2em;
+    }
+
+    @media ${deviceMin.laptopS} {
+        font-size: 1.3em;
+    }
 `;
 
 //Styles:
