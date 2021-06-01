@@ -273,10 +273,11 @@ const ButtonContainer = styled.div`
     justify-content: flex-start;
     /* grid-template-columns: 50% 50%; */
     margin: 1em 0;
+    max-width: 22rem;
 `;
 
 const ButtonSpacing = styled.div`
-    width: 0.5em;
+    width: 1em;
 `;
 
 //This type could also be interface, use interface if need to export for extension. Interface are better used for prop handling in react. Types are better used for functions and complex types...
