@@ -113,6 +113,7 @@ const Herotext = () => {
                 label="Connect with me!"
                 btnBackground="transparent"
                 btnTextColor="#fdbc3d"
+                isDisabled={false}
             />
         </MainContainer>
     );
