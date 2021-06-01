@@ -397,6 +397,7 @@ const ProjectItem = ({
                             buttonIcon={<GithubIcon />}
                             btnBackground="transparent"
                             btnTextColor="#fdbc3d"
+                            isDisabled={false}
                         />
                         <ButtonSpacing />
                         <Button
@@ -404,6 +405,7 @@ const ProjectItem = ({
                             buttonIcon={<PlayIcon />}
                             btnBackground="#fdbc3d"
                             btnTextColor="#010d1A"
+                            isDisabled={false}
                         />
                     </ButtonContainer>
                 </MainProjectContainer>
