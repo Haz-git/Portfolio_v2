@@ -156,9 +156,8 @@ const MainContactMeForm = () => {
                 templateParams,
                 'user_1eDpqP05zoCB3CLCEncXA'
             );
-
+            setIsEmailSent(true);
             resetForm();
-            alert('Your email message has been sent!');
         } else {
             if (userName === '' && userEmail === '' && userMessage === '') {
                 setNameError(true);
@@ -221,6 +220,8 @@ const MainContactMeForm = () => {
                     btnTextColor="inherit"
                     btnBackground="#fdbc3d"
                     onClick={submitEmailMessage}
+                    isDisabled={isEmailSent}
+                    onDisabledText="Email Sent!"
                 />
             </ButtonContainer>
         </MainContainer>
