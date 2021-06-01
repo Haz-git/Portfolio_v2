@@ -54,11 +54,13 @@ const MainDesc = styled.p`
     }
 
     @media ${deviceMin.tablet} {
-        font-size: 1em;
+        font-size: 1.2em;
+        font-weight: 500;
     }
 
     @media ${deviceMin.laptopS} {
-        font-size: 1.1em;
+        font-size: 1.3em;
+        font-weight: 500;
     }
 `;
 
@@ -74,6 +76,10 @@ const InputDesc = styled.p`
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
     text-align: left;
     margin: 0.5em 0;
+
+    @media ${deviceMin.tablet} {
+        font-size: 1.3em;
+    }
 `;
 
 const InputTextArea = styled.textarea<InputTextFieldType>`
@@ -93,10 +99,19 @@ const InputTextArea = styled.textarea<InputTextFieldType>`
         InputTextFieldType.inputValueError === false
             ? '1px solid #1b222a'
             : '1px solid red'};
+
+    @media ${deviceMin.tablet} {
+        font-size: 1.2em;
+    }
+
+    @media ${deviceMin.laptopS} {
+        font-size: 1.3em;
+    }
 `;
 
 const ButtonContainer = styled.div`
-    margin: 1em 0;
+    margin: 1em auto;
+    max-width: 15rem;
 `;
 
 //Type for styled-component
