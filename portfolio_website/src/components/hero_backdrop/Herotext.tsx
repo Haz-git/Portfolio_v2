@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
+import { Link } from 'react-scroll';
 
 //Components:
 import Button from './Button';
@@ -109,12 +110,14 @@ const Herotext = () => {
                     UCSD's Research IT Services.
                 </DescText>
             </DescContainer>
-            <Button
-                label="Connect with me!"
-                btnBackground="transparent"
-                btnTextColor="#fdbc3d"
-                isDisabled={false}
-            />
+            <Link to="contactformcontainer" smooth={true}>
+                <Button
+                    label="Connect with me!"
+                    btnBackground="transparent"
+                    btnTextColor="#fdbc3d"
+                    isDisabled={false}
+                />
+            </Link>
         </MainContainer>
     );
 };
