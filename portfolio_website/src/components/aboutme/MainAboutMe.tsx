@@ -19,6 +19,10 @@ const MainContainer = styled.section`
     @media ${deviceMin.laptopS} {
         padding: 0 16.5%;
     }
+
+    @media ${deviceMin.desktopS} {
+        padding: 0 25%;
+    }
 `;
 
 const MainDrawerContainer = styled.div`

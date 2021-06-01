@@ -19,8 +19,13 @@ const MainContainer = styled.section`
         margin-top: 5rem;
         padding: 0 2rem;
     }
+
     @media ${deviceMin.laptopS} {
         padding: 0 16.5%;
+    }
+
+    @media ${deviceMin.desktopS} {
+        padding: 0 25%;
     }
 `;
 
