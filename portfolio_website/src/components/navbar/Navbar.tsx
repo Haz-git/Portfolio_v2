@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
+import { Link } from 'react-scroll';
 
 //Logo:
 import navLogo from '../../imgs/logo1.png';
@@ -109,7 +110,7 @@ const NavbarLinkContainer = styled.div`
     margin: 0 3em;
 `;
 
-const NavbarLink = styled.button`
+const NavbarLink = styled(Link)`
     font-family: 'Nunito', sans-serif;
     font-size: 1.2em;
     color: rgba(255, 255, 255, 1);
@@ -159,13 +160,23 @@ const Navbar = () => {
             </NavbarLogoContainer>
             <NavbarLinksContainer>
                 <NavbarLinkContainer>
-                    <NavbarLink>Projects</NavbarLink>
+                    <NavbarLink to="projectcontainer" smooth={true}>
+                        Projects
+                    </NavbarLink>
                 </NavbarLinkContainer>
                 <NavbarLinkContainer>
-                    <NavbarLink>About</NavbarLink>
+                    <NavbarLink
+                        to="aboutmecontainer"
+                        smooth={true}
+                        offset={-200}
+                    >
+                        About
+                    </NavbarLink>
                 </NavbarLinkContainer>
                 <NavbarLinkContainer>
-                    <NavbarLink>Contact</NavbarLink>
+                    <NavbarLink to="contactformcontainer" smooth={true}>
+                        Contact
+                    </NavbarLink>
                 </NavbarLinkContainer>
             </NavbarLinksContainer>
             <NavbarSocialMediaContainer>
