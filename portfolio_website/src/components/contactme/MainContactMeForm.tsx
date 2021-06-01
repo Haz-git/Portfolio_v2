@@ -14,6 +14,14 @@ import * as emailjs from 'emailjs-com';
 const MainContainer = styled.section`
     padding: 0 1em;
     margin-top: 2em;
+
+    @media ${deviceMin.tablet} {
+        margin-top: 5rem;
+        padding: 0 2rem;
+    }
+    @media ${deviceMin.laptopS} {
+        padding: 0 16.5%;
+    }
 `;
 
 const ContactHeader = styled(MainHeader)`
