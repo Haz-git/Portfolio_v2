@@ -267,6 +267,13 @@ const ToolContainer = styled.div`
     }
 `;
 
+const InvisAnchor = styled.a`
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+`;
+
 const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
@@ -288,6 +295,8 @@ interface ProjectItemProps {
     desc: string;
     image: string;
     buildTools?: string[];
+    viewCodeDest?: string;
+    testLiveDest?: string;
 }
 
 //Destructure the header type from type or interface, JSX.Element is an annotated return type. This causes an error to be raised if another type is return accidentally. Leaving out JSX.Element results in an inferred return type.
@@ -297,6 +306,8 @@ const ProjectItem = ({
     desc,
     image,
     buildTools,
+    viewCodeDest,
+    testLiveDest,
 }: ProjectItemProps): JSX.Element => {
     const findBuildTools = () => {
         //How do I take this array of text --> Insert a bunch of icons according to the order of the text --> map them out to the website?
@@ -392,21 +403,33 @@ const ProjectItem = ({
                         {findBuildTools()}
                     </BuildToolsContainer>
                     <ButtonContainer>
-                        <Button
-                            label="View code"
-                            buttonIcon={<GithubIcon />}
-                            btnBackground="transparent"
-                            btnTextColor="#fdbc3d"
-                            isDisabled={false}
-                        />
+                        <InvisAnchor
+                            href={viewCodeDest}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button
+                                label="View code"
+                                buttonIcon={<GithubIcon />}
+                                btnBackground="transparent"
+                                btnTextColor="#fdbc3d"
+                                isDisabled={false}
+                            />
+                        </InvisAnchor>
                         <ButtonSpacing />
-                        <Button
-                            label="Test live"
-                            buttonIcon={<PlayIcon />}
-                            btnBackground="#fdbc3d"
-                            btnTextColor="#010d1A"
-                            isDisabled={false}
-                        />
+                        <InvisAnchor
+                            href={testLiveDest}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button
+                                label="Test live"
+                                buttonIcon={<PlayIcon />}
+                                btnBackground="#fdbc3d"
+                                btnTextColor="#010d1A"
+                                isDisabled={false}
+                            />
+                        </InvisAnchor>
                     </ButtonContainer>
                 </MainProjectContainer>
             </MobileOnlyView>
@@ -424,21 +447,33 @@ const ProjectItem = ({
                             {findBuildTools()}
                         </DesktopBuildToolsContainer>
                         <ButtonContainer>
-                            <Button
-                                label="View code"
-                                buttonIcon={<GithubIcon />}
-                                btnBackground="transparent"
-                                btnTextColor="#fdbc3d"
-                                isDisabled={false}
-                            />
+                            <InvisAnchor
+                                href={viewCodeDest}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button
+                                    label="View code"
+                                    buttonIcon={<GithubIcon />}
+                                    btnBackground="transparent"
+                                    btnTextColor="#fdbc3d"
+                                    isDisabled={false}
+                                />
+                            </InvisAnchor>
                             <ButtonSpacing />
-                            <Button
-                                label="Test live"
-                                buttonIcon={<PlayIcon />}
-                                btnBackground="#fdbc3d"
-                                btnTextColor="#010d1A"
-                                isDisabled={false}
-                            />
+                            <InvisAnchor
+                                href={testLiveDest}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button
+                                    label="Test live"
+                                    buttonIcon={<PlayIcon />}
+                                    btnBackground="#fdbc3d"
+                                    btnTextColor="#010d1A"
+                                    isDisabled={false}
+                                />
+                            </InvisAnchor>
                         </ButtonContainer>
                     </DesktopProjectDetailsContainer>
                     <ImgContainer>
