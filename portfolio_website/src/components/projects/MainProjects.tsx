@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
+import { Element } from 'react-scroll';
 
 //Components:
 import ProjectItem from './ProjectItem';
@@ -57,51 +58,53 @@ const ProjectItemContainer = styled.div`
 
 const MainProjects = () => {
     return (
-        <MainContainer>
-            <MainHeader>My Projects</MainHeader>
-            <ProjectItemContainer>
-                <ProjectItem
-                    header="GymJot"
-                    desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. This app is ongoing, actively worked on, and improved."
-                    image={gymjotImg}
-                    buildTools={[
-                        'html',
-                        'css',
-                        'js',
-                        'react',
-                        'redux',
-                        'node',
-                        'mongo',
-                        'express',
-                    ]}
-                />
-            </ProjectItemContainer>
-            <ProjectItemContainer>
-                <ProjectItem
-                    header="Petri"
-                    desc="Petri is an original, browser-based webapp I developed to increase research workflow and productivity for my lab at UCSD. This app is ongoing, actively worked on, and improved."
-                    image={petriImg}
-                    buildTools={[
-                        'html',
-                        'css',
-                        'js',
-                        'react',
-                        'redux',
-                        'node',
-                        'mongo',
-                        'express',
-                    ]}
-                />
-            </ProjectItemContainer>
-            <ProjectItemContainer>
-                <ProjectItem
-                    header="My Personal Website"
-                    desc="This portfolio website was built with a simple and elegant design in mind. Additionally, creating this website was an introduction to Typescript."
-                    image={portfolioImg}
-                    buildTools={['html', 'css', 'js', 'ts', 'react']}
-                />
-            </ProjectItemContainer>
-        </MainContainer>
+        <Element name="projectcontainer">
+            <MainContainer>
+                <MainHeader>My Projects</MainHeader>
+                <ProjectItemContainer>
+                    <ProjectItem
+                        header="GymJot"
+                        desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. This app is ongoing, actively worked on, and improved."
+                        image={gymjotImg}
+                        buildTools={[
+                            'html',
+                            'css',
+                            'js',
+                            'react',
+                            'redux',
+                            'node',
+                            'mongo',
+                            'express',
+                        ]}
+                    />
+                </ProjectItemContainer>
+                <ProjectItemContainer>
+                    <ProjectItem
+                        header="Petri"
+                        desc="Petri is an original, browser-based webapp I developed to increase research workflow and productivity for my lab at UCSD. This app is ongoing, actively worked on, and improved."
+                        image={petriImg}
+                        buildTools={[
+                            'html',
+                            'css',
+                            'js',
+                            'react',
+                            'redux',
+                            'node',
+                            'mongo',
+                            'express',
+                        ]}
+                    />
+                </ProjectItemContainer>
+                <ProjectItemContainer>
+                    <ProjectItem
+                        header="My Personal Website"
+                        desc="This portfolio website was built with a simple and elegant design in mind. Additionally, creating this website was an introduction to Typescript."
+                        image={portfolioImg}
+                        buildTools={['html', 'css', 'js', 'ts', 'react']}
+                    />
+                </ProjectItemContainer>
+            </MainContainer>
+        </Element>
     );
 };
 
