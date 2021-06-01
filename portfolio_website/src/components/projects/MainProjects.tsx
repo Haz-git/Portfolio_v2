@@ -76,6 +76,8 @@ const MainProjects = () => {
                             'mongo',
                             'express',
                         ]}
+                        viewCodeDest="https://github.com/Haz-git/barbellbuilder_client"
+                        testLiveDest="https://gymjot.netlify.app/"
                     />
                 </ProjectItemContainer>
                 <ProjectItemContainer>
@@ -93,6 +95,8 @@ const MainProjects = () => {
                             'mongo',
                             'express',
                         ]}
+                        viewCodeDest="https://github.com/Haz-git/Petri_Client_Build"
+                        testLiveDest="https://petriweb.netlify.app/"
                     />
                 </ProjectItemContainer>
                 <ProjectItemContainer>
