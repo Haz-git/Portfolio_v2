@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
         background: #010d1A;
 
     }
+
+    a {
+        margin: 0;
+        padding: 0;
+    }
 `;
 
 export default GlobalStyle;
