@@ -11,15 +11,20 @@ const MainContainer = styled.section`
     margin-top: 5em;
     padding: 0 1em;
 
+    @media ${deviceMin.tablet} {
+        margin-top: 5rem;
+        padding: 0 2rem;
+    }
+
     @media ${deviceMin.laptopS} {
-        padding: 0 15%;
+        padding: 0 16.5%;
     }
 `;
 
 const MainDrawerContainer = styled.div`
-    @media ${deviceMin.tablet} {
+    /* @media ${deviceMin.tablet} {
         padding: 0 2rem;
-    }
+    } */
 `;
 
 const DrawerContainer = styled.div`
