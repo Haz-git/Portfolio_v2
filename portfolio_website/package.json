@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-burger-menu": "^2.8.0",
     "@types/react-scroll": "^1.8.2",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
