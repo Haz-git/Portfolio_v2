@@ -105,6 +105,8 @@ const MainProjects = () => {
                         desc="This portfolio website was built with a simple and elegant design in mind. Additionally, creating this website was an introduction to Typescript."
                         image={portfolioImg}
                         buildTools={['html', 'css', 'js', 'ts', 'react']}
+                        viewCodeDest="https://github.com/Haz-git/Portfolio_v2"
+                        testLiveDest="https://harryzhou.netlify.app/"
                     />
                 </ProjectItemContainer>
             </MainContainer>
