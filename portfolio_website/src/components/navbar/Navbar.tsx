@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
 import { Link } from 'react-scroll';
 
+//Components:
+import { slide as Sidebar } from 'react-burger-menu';
+
 //Logo:
 import navLogo from '../../imgs/logo1.png';
 
@@ -160,6 +163,50 @@ const BurgerMenuContainer = styled.button`
 `;
 
 const Navbar = () => {
+    const sideBarStyles = {
+        bmBurgerButton: {
+            // position: 'static',
+            width: '2.2rem',
+            height: '2.2rem',
+            // left: '1rem',
+            // top: '1rem',
+        },
+        bmBurgerBars: {
+            background: '#fdbc3d',
+        },
+        bmBurgerBarsHover: {
+            background: '#fdbc3d',
+        },
+        bmCrossButton: {
+            height: '24px',
+            width: '24px',
+        },
+        bmCross: {
+            background: '#fdbc3d',
+        },
+        bmMenuWrap: {
+            position: 'fixed',
+            height: '100%',
+        },
+        bmMenu: {
+            background: '#373a47',
+            padding: '2.5em 1.5em 0',
+            fontSize: '1.15em',
+        },
+        bmMorphShape: {
+            fill: '#373a47',
+        },
+        bmItemList: {
+            color: '#b8b7ad',
+            padding: '0.8em',
+        },
+        bmItem: {
+            display: 'inline-block',
+        },
+        bmOverlay: {
+            background: 'rgba(0, 0, 0, 0.3)',
+        },
+    };
     return (
         <NavbarContainer>
             <NavbarLogoContainer>
@@ -209,7 +256,12 @@ const Navbar = () => {
                     <LinkedinIcon />
                 </NavbarSocialMediaIconWrapper>
                 <BurgerMenuContainer>
-                    <MenuIcon />
+                    {/* <MenuIcon /> */}
+                    <Sidebar styles={sideBarStyles} right width={100}>
+                        <NavbarLink to="projectcontainer" smooth={true}>
+                            test
+                        </NavbarLink>
+                    </Sidebar>
                 </BurgerMenuContainer>
             </NavbarSocialMediaContainer>
         </NavbarContainer>
