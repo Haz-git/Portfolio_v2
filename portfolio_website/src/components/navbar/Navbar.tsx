@@ -118,6 +118,12 @@ const NavbarLink = styled(Link)`
     background: none;
     border: none;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     @media ${deviceMin.mobileS} {
         display: none;
