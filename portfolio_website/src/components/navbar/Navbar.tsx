@@ -101,7 +101,8 @@ const NavbarSocialMediaContainer = styled.div`
     }
 `;
 
-const NavbarSocialMediaIconWrapper = styled.div`
+const NavbarSocialMediaIconWrapper = styled.a`
+    text-decoration: none;
     margin: 0 0.2em;
 `;
 
@@ -186,13 +187,25 @@ const Navbar = () => {
                 </NavbarLinkContainer>
             </NavbarLinksContainer>
             <NavbarSocialMediaContainer>
-                <NavbarSocialMediaIconWrapper>
+                <NavbarSocialMediaIconWrapper
+                    href="https://twitter.com/harryzhou10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <TwitterIcon />
                 </NavbarSocialMediaIconWrapper>
-                <NavbarSocialMediaIconWrapper>
+                <NavbarSocialMediaIconWrapper
+                    href="https://github.com/Haz-git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <GithubIcon />
                 </NavbarSocialMediaIconWrapper>
-                <NavbarSocialMediaIconWrapper>
+                <NavbarSocialMediaIconWrapper
+                    href="https://linkedin.com/in/haz125"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <LinkedinIcon />
                 </NavbarSocialMediaIconWrapper>
                 <BurgerMenuContainer>
