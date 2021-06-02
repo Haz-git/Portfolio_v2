@@ -111,7 +111,7 @@ const NavbarLinkContainer = styled.div`
     margin: 0 3em;
 `;
 
-const NavbarLink = styled(Link)`
+export const NavbarLink = styled(Link)`
     font-family: 'Nunito', sans-serif;
     font-size: 1.2em;
     color: rgba(255, 255, 255, 1);
