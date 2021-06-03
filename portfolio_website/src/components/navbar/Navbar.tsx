@@ -149,6 +149,7 @@ const NavbarLogo = styled.img`
 
 const BurgerMenuContainer = styled.button`
     margin-left: 1em;
+    position: relative;
     background: inherit;
     border: none;
     cursor: pointer;
@@ -165,11 +166,9 @@ const BurgerMenuContainer = styled.button`
 const Navbar = () => {
     const sideBarStyles = {
         bmBurgerButton: {
-            // position: 'static',
-            width: '2.2rem',
-            height: '2.2rem',
-            // left: '1rem',
-            // top: '1rem',
+            // position: 'absolute',
+            width: '2rem',
+            height: '2rem',
         },
         bmBurgerBars: {
             background: '#fdbc3d',
@@ -257,7 +256,7 @@ const Navbar = () => {
                 </NavbarSocialMediaIconWrapper>
                 <BurgerMenuContainer>
                     {/* <MenuIcon /> */}
-                    <Sidebar styles={sideBarStyles} right width={100}>
+                    <Sidebar styles={sideBarStyles} right width={200}>
                         <NavbarLink to="projectcontainer" smooth={true}>
                             test
                         </NavbarLink>
