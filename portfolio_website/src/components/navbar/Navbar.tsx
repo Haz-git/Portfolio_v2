@@ -185,26 +185,27 @@ const Navbar = () => {
         },
         bmMenuWrap: {
             position: 'fixed',
-            height: '100%',
+            height: '40%',
         },
         bmMenu: {
-            background: '#373a47',
-            padding: '2.5em 1.5em 0',
+            background: '#1b222a',
+            padding: '2em 1em 0',
             fontSize: '1.15em',
+            borderRadius: '.5em',
         },
         bmMorphShape: {
-            fill: '#373a47',
+            fill: '#1b222a',
         },
         bmItemList: {
-            color: '#b8b7ad',
+            color: 'rgba(255, 255, 255, 1)',
             padding: '0.8em',
         },
         bmItem: {
             display: 'inline-block',
         },
-        bmOverlay: {
-            background: 'rgba(0, 0, 0, 0.3)',
-        },
+        // bmOverlay: {
+        //     background: 'rgba(0, 0, 0, 0.3)',
+        // },
     };
     return (
         <NavbarContainer>
@@ -256,9 +257,19 @@ const Navbar = () => {
                 </NavbarSocialMediaIconWrapper>
                 <BurgerMenuContainer>
                     {/* <MenuIcon /> */}
-                    <Sidebar styles={sideBarStyles} right width={200}>
+                    <Sidebar styles={sideBarStyles} right width={'50%'}>
                         <NavbarLink to="projectcontainer" smooth={true}>
-                            test
+                            My Projects
+                        </NavbarLink>
+                        <NavbarLink
+                            to="aboutmecontainer"
+                            smooth={true}
+                            offset={-100}
+                        >
+                            About Me
+                        </NavbarLink>
+                        <NavbarLink to="contactformcontainer" smooth={true}>
+                            Contact Me
                         </NavbarLink>
                     </Sidebar>
                 </BurgerMenuContainer>
