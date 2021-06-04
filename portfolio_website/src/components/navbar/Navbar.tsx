@@ -97,6 +97,7 @@ const NavbarSocialMediaContainer = styled.div`
 
     @media ${deviceMin.mobileS} {
         justify-content: start;
+        align-items: center;
     }
 
     @media ${deviceMin.tablet} {
@@ -163,12 +164,14 @@ const BurgerMenuContainer = styled.button`
     }
 `;
 
+//Interface:
+
 const Navbar = () => {
     const sideBarStyles = {
         bmBurgerButton: {
             // position: 'absolute',
-            width: '2rem',
-            height: '2rem',
+            width: '1.85rem',
+            height: '1.85rem',
         },
         bmBurgerBars: {
             background: '#fdbc3d',
@@ -213,6 +216,7 @@ const Navbar = () => {
             background: 'none',
         },
     };
+
     return (
         <NavbarContainer>
             <NavbarLogoContainer>
@@ -263,7 +267,12 @@ const Navbar = () => {
                 </NavbarSocialMediaIconWrapper>
                 <BurgerMenuContainer>
                     {/* <MenuIcon /> */}
-                    <Sidebar styles={sideBarStyles} right width={'40%'}>
+                    <Sidebar
+                        styles={sideBarStyles}
+                        right
+                        width={'40%'}
+                        noOverlay
+                    >
                         <NavbarLink to="projectcontainer" smooth={true}>
                             My Projects
                         </NavbarLink>
