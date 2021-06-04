@@ -3,16 +3,24 @@ import styled from 'styled-components';
 import { deviceMin } from '../../devices/breakpoints';
 
 //Styles:
-const MainContainer = styled.button`
-    background: #1b222a;
-    padding: 1em 1em;
+const MainContainer = styled.button<MainContainerProps>`
+    background: ${(MainContainerProps) =>
+        MainContainerProps.isRevealed === false ? '#1b222a' : 'inherit'};
+    padding: ${(MainContainerProps) =>
+        MainContainerProps.isRevealed === false ? '1em 1em' : '.5em 0'};
     border-radius: 0.5em;
     transition: 0.2s all ease-out;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    cursor: ${(MainContainerProps) =>
+        MainContainerProps.isRevealed === false ? 'pointer' : 'default'};
+    box-shadow: ${(MainContainerProps) =>
+        MainContainerProps.isRevealed === false
+            ? 'rgba(0, 0, 0, 1) 0px 3px 3px'
+            : 'none'};
+    transition: all 0.3s ease;
 
     &:hover {
-        transform: scale(1.05);
+        transform: ${(MainContainerProps) =>
+            MainContainerProps.isRevealed === false ? 'scale(1.05)' : 'None'};
     }
 `;
 
@@ -65,12 +73,16 @@ const AnswerText = styled.p`
 `;
 
 //Interface:
-type drawerProps = {
+interface DrawerProps {
     question: string;
     answer: string;
-};
+}
 
-const DrawerComponent = ({ question, answer }: drawerProps): JSX.Element => {
+interface MainContainerProps {
+    isRevealed?: boolean;
+}
+
+const DrawerComponent = ({ question, answer }: DrawerProps): JSX.Element => {
     const [showAns, setShowAns] = useState(false);
 
     const handleShowAns = () => {
@@ -78,7 +90,7 @@ const DrawerComponent = ({ question, answer }: drawerProps): JSX.Element => {
     };
 
     return (
-        <MainContainer onClick={handleShowAns}>
+        <MainContainer onClick={handleShowAns} isRevealed={showAns}>
             {showAns === false ? (
                 <QuestionContainer>
                     <QuestionText>{question}</QuestionText>
