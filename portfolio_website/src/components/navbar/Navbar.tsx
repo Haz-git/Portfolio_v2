@@ -52,6 +52,7 @@ const NavbarContainer = styled.nav`
     padding: 1.5em 15%;
     position: sticky;
     top: 0;
+    z-index: 99 !important;
 
     @media ${deviceMin.mobileS} {
         padding: 0.5em 1em;
@@ -279,7 +280,6 @@ const Navbar = () => {
                     <LinkedinIcon />
                 </NavbarSocialMediaIconWrapper>
                 <BurgerMenuContainer>
-                    {/* <MenuIcon /> */}
                     <Sidebar
                         styles={sideBarStyles}
                         right
