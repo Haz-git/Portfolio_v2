@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { deviceMax, deviceMin } from '../../devices/breakpoints';
 import { Link } from 'react-scroll';
@@ -169,6 +169,9 @@ const BurgerMenuContainer = styled.button`
 //Interface:
 
 const Navbar = () => {
+    //State for menu:
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const sideBarStyles = {
         bmBurgerButton: {
             // position: 'absolute',
@@ -217,6 +220,14 @@ const Navbar = () => {
         bmOverlay: {
             background: 'none',
         },
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    const handleStateChange = (state: any) => {
+        setIsMenuOpen(state.isOpen);
     };
 
     return (
@@ -274,18 +285,29 @@ const Navbar = () => {
                         right
                         width={'40%'}
                         noOverlay
+                        isOpen={isMenuOpen}
+                        onStateChange={handleStateChange}
                     >
-                        <NavbarLink to="projectcontainer" smooth={true}>
+                        <NavbarLink
+                            to="projectcontainer"
+                            smooth={true}
+                            onClick={closeMenu}
+                        >
                             My Projects
                         </NavbarLink>
                         <NavbarLink
                             to="aboutmecontainer"
                             smooth={true}
                             offset={-100}
+                            onClick={closeMenu}
                         >
                             About Me
                         </NavbarLink>
-                        <NavbarLink to="contactformcontainer" smooth={true}>
+                        <NavbarLink
+                            to="contactformcontainer"
+                            smooth={true}
+                            onClick={closeMenu}
+                        >
                             Contact Me
                         </NavbarLink>
                     </Sidebar>
