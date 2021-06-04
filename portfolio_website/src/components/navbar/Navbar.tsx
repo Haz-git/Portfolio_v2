@@ -48,8 +48,10 @@ const NavbarContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: inherit;
+    background: #010d1a;
     padding: 1.5em 15%;
+    position: sticky;
+    top: 0;
 
     @media ${deviceMin.mobileS} {
         padding: 0.5em 1em;
