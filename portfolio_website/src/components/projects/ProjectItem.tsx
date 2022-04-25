@@ -10,6 +10,7 @@ import { deviceMin } from '../../devices/breakpoints';
 
 //Components:
 import Button from '../hero_backdrop/Button';
+import { Tooltip, FloatingTooltip } from '@mantine/core';
 
 //Icons: remix-fill:
 import { Play } from '@styled-icons/remix-line/Play';
@@ -323,71 +324,141 @@ const ProjectItem = ({
                 switch (tool) {
                     case 'html':
                         return (
-                            <ToolContainer>
-                                <HtmlIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="HTML5"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <HtmlIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'css':
                         return (
-                            <ToolContainer>
-                                <CssIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="CSS3"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <CssIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'js':
                         return (
-                            <ToolContainer>
-                                <JavascriptIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="JavaScript"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <JavascriptIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'react':
                         return (
-                            <ToolContainer>
-                                <ReactIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="ReactJS"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <ReactIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'redux':
                         return (
-                            <ToolContainer>
-                                <ReduxIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="Redux, React-Redux"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <ReduxIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'ts':
                         return (
-                            <ToolContainer>
-                                <TypescriptIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="TypeScript"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <TypescriptIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'node':
                         return (
-                            <ToolContainer>
-                                <NodeIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="NodeJS"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <NodeIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'mongo':
                         return (
-                            <ToolContainer>
-                                <MongoIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="MongoDB"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <MongoIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     case 'express':
                         return (
-                            <ToolContainer>
-                                <ExpressIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="ExpressJS"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <ExpressIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
                     case 'postgres':
                         return (
-                            <ToolContainer>
-                                <PostgresIcon />
-                            </ToolContainer>
+                            <Tooltip
+                                label="PostgreSQL"
+                                withArrow
+                                position="top"
+                                placement="center"
+                            >
+                                <ToolContainer>
+                                    <PostgresIcon />
+                                </ToolContainer>
+                            </Tooltip>
                         );
 
                     default:
