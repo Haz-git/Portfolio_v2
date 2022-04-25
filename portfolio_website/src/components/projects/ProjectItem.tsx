@@ -26,6 +26,7 @@ import { Typescript } from '@styled-icons/simple-icons/Typescript';
 import { Nodejs } from '@styled-icons/boxicons-logos/Nodejs';
 import { Mongodb } from '@styled-icons/simple-icons/Mongodb';
 import { Express } from '@styled-icons/simple-icons/Express';
+import { Postgresql } from '@styled-icons/simple-icons/Postgresql';
 
 const PlayIcon = styled(Play)`
     height: 1.5rem;
@@ -40,6 +41,12 @@ const GithubIcon = styled(Github)`
 `;
 
 const HtmlIcon = styled(Html5)`
+    height: 2rem;
+    width: 2rem;
+    color: #fdbc3d;
+`;
+
+const PostgresIcon = styled(Postgresql)`
     height: 2rem;
     width: 2rem;
     color: #fdbc3d;
@@ -310,7 +317,6 @@ const ProjectItem = ({
     testLiveDest,
 }: ProjectItemProps): JSX.Element => {
     const findBuildTools = () => {
-        //How do I take this array of text --> Insert a bunch of icons according to the order of the text --> map them out to the website?
         if (buildTools) {
             return buildTools.map((tool) => {
                 // if (tool === 'html') return <HtmlIcon />;
@@ -375,6 +381,12 @@ const ProjectItem = ({
                         return (
                             <ToolContainer>
                                 <ExpressIcon />
+                            </ToolContainer>
+                        );
+                    case 'postgres':
+                        return (
+                            <ToolContainer>
+                                <PostgresIcon />
                             </ToolContainer>
                         );
 

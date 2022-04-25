@@ -63,8 +63,29 @@ const MainProjects = () => {
                 <MainHeader>My Projects</MainHeader>
                 <ProjectItemContainer>
                     <ProjectItem
+                        header="PushPull"
+                        desc={`PushPull is an original, responsive, webapp I solely developed for fitness coaches.
+                         This project includes a complex workout templating engine involving auto-saving, drag and drop, file system architecture, link sharing, PDF printing, and more. This app is ongoing, actively worked on, and improved.`}
+                        image={gymjotImg}
+                        buildTools={[
+                            'html',
+                            'css',
+                            'ts',
+                            'js',
+                            'react',
+                            'redux',
+                            'node',
+                            'postgres',
+                            'express',
+                        ]}
+                        viewCodeDest="https://github.com/Haz-git/PushPull-client"
+                        testLiveDest="https://gopushpull.com"
+                    />
+                </ProjectItemContainer>
+                <ProjectItemContainer>
+                    <ProjectItem
                         header="GymJot"
-                        desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. This app is ongoing, actively worked on, and improved."
+                        desc="GymJot is an original, mobile/desktop compatible, progressive webapp built for powerlifting and fitness workflows. Features of this project include user stat-logs to record exercise progress as well as an extensive system to build custom, runnable workout routines."
                         image={gymjotImg}
                         buildTools={[
                             'html',
@@ -83,7 +104,7 @@ const MainProjects = () => {
                 <ProjectItemContainer>
                     <ProjectItem
                         header="Petri"
-                        desc="Petri is an original, browser-based webapp I developed to increase research workflow and productivity for my lab at UCSD. This app is ongoing, actively worked on, and improved."
+                        desc="Petri is an original, browser-based webapp I developed to increase the research productivity for my lab members at in the Saier Lab, located at UCSD. This project involves a collection of research-oriented productivity applications, including a dynamic calendar, real-time messenger, file system, and a custom data visualizer for beta-galactosidase assays"
                         image={petriImg}
                         buildTools={[
                             'html',
