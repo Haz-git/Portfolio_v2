@@ -8,6 +8,7 @@ import ProjectItem from './ProjectItem';
 import gymjotImg from '../../imgs/gymjot_project.png';
 import petriImg from '../../imgs/petri_project.png';
 import portfolioImg from '../../imgs/portfolio_project.png';
+import pushpullImg from '../../imgs/pushpull_project.png';
 
 //Styles:
 
@@ -66,7 +67,7 @@ const MainProjects = () => {
                         header="PushPull"
                         desc={`PushPull is an original, responsive, webapp I solely developed for fitness coaches.
                          This project includes a complex workout templating engine involving auto-saving, drag and drop, file system architecture, link sharing, PDF printing, and more. This app is ongoing, actively worked on, and improved.`}
-                        image={gymjotImg}
+                        image={pushpullImg}
                         buildTools={[
                             'html',
                             'css',
