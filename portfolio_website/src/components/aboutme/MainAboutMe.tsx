@@ -51,19 +51,19 @@ const MainAboutMe = () => {
                     <DrawerContainer>
                         <DrawerComponent
                             question="Why did you learn to code?"
-                            answer="During my microbiology career, I dabbled in bioinformatics. Through bioinformatics and my current job, I started tinkering with code more often and fell in love. The rest is history!"
+                            answer="During my Molecular/Micro-biology career, I also dabbled in bioinformatics. Bioinformatics taught me basic scripts, and then I started tinkering with code on my own time. I fell in love with the idea of bringing what I want to see in the software world to life. I created my first SaaS start up by creating a fully functional full stack web application called 'Petri' that my research lab members used. I discussed new features and bugs every day with my colleagues, and grew passionate about end-to-end development, especially in web applications."
                         />
                     </DrawerContainer>
                     <DrawerContainer>
                         <DrawerComponent
                             question="What are you working on right now?"
-                            answer="Currently, I'm working on finishing my master's research about insertional elements in E. coli in addition to improving my two largest personal projects-- GymJot and Petri."
+                            answer="Currently, I'm working on the final touches of my master's research in addition to improving my latest SaaS Start Up-- PushPull"
                         />
                     </DrawerContainer>
                     <DrawerContainer>
                         <DrawerComponent
                             question="What's important to you in tech?"
-                            answer="Growth, mentorship, and challenge are some qualities I look for in a career."
+                            answer="Growth, mentorship, and frequent challenges are some qualities I look for in a career."
                         />
                     </DrawerContainer>
                     <DrawerContainer>

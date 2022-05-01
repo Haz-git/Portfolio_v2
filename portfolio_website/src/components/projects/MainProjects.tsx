@@ -61,7 +61,7 @@ const MainProjects = () => {
     return (
         <Element name="projectcontainer">
             <MainContainer>
-                <MainHeader>My Projects</MainHeader>
+                <MainHeader>SaaS Start-ups | Projects</MainHeader>
                 <ProjectItemContainer>
                     <ProjectItem
                         header="PushPull"

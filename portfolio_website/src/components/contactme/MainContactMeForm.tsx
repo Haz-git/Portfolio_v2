@@ -215,7 +215,7 @@ const MainContactMeForm = () => {
     return (
         <Element name="contactformcontainer">
             <MainContainer>
-                <ContactHeader>Send me stuff</ContactHeader>
+                <ContactHeader>Let's Chat</ContactHeader>
                 <DescContainer>
                     <MainDesc>
                         Want to know how I built my projects? Do you have an
