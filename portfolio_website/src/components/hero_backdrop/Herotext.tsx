@@ -106,8 +106,8 @@ const Herotext = () => {
                 <DescText>
                     By day, I'm a master's candidate studying Micro-/Molecular-
                     Biology with a love for everything tech and research. At
-                    night, I'm a web developer and data wrangler working in
-                    UCSD's Research IT Services.
+                    night, I'm a Full-Stack Engineer working in UC San Diego's
+                    Research IT Services.
                 </DescText>
             </DescContainer>
             <Link to="contactformcontainer" smooth={true}>
