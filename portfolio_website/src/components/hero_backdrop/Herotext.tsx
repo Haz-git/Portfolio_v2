@@ -105,12 +105,10 @@ const Herotext = () => {
             <DescContainer>
                 <DescText>
                     I'm a full stack software engineer driven by curiosity and a
-                    desire to make stuff people use! I come from a unique
-                    background -- I've studied and performed extensive
-                    Microbiological and Molecular Biological research during my
-                    time in school. Contrary to popular belief, my experience
-                    have taught me to be quick learner that is meticulous and
-                    detail-oriented.
+                    desire to make stuff people use! My unique background
+                    performing extensive Micro- and Molecular- biological
+                    research have taught me to be a quick learner that is
+                    meticulous and detail-oriented.
                 </DescText>
             </DescContainer>
             <Link to="contactformcontainer" smooth={true}>
