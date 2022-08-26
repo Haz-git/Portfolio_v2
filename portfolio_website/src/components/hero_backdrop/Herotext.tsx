@@ -104,10 +104,13 @@ const Herotext = () => {
             <MainText>Hey! I'm Harry, a Software Engineer.</MainText>
             <DescContainer>
                 <DescText>
-                    By day, I'm a master's candidate studying Micro-/Molecular-
-                    Biology with a love for everything tech and research. At
-                    night, I'm a web developer and data wrangler working in
-                    UCSD's Research IT Services.
+                    I'm a full stack software engineer driven by curiosity and a
+                    desire to make stuff people use! I come from a unique
+                    background -- I've studied and performed extensive
+                    Microbiological and Molecular Biological research during my
+                    time in school. Contrary to popular belief, my experience
+                    have taught me to be quick learner that is meticulous and
+                    detail-oriented.
                 </DescText>
             </DescContainer>
             <Link to="contactformcontainer" smooth={true}>

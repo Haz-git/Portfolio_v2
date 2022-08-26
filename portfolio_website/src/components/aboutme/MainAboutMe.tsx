@@ -69,7 +69,7 @@ const MainAboutMe = () => {
                     <DrawerContainer>
                         <DrawerComponent
                             question="Are you available for hire?"
-                            answer="I'm presently working as a Systems Integration Engineer III in my role at UCSD Research IT Services. However, I'm always open to discuss new opportunities. Don't hesitate to reach out!"
+                            answer="I'm presently working as a Full Stack Software Engineer in my role at Aicadium. However, I'm always open to discuss new opportunities. Don't hesitate to reach out!"
                         />
                     </DrawerContainer>
                 </MainDrawerContainer>
